@@ -1,0 +1,66 @@
+.event-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+  }
+  
+  &__name {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+  }
+  
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  &__date {
+    margin: 0;
+    font-weight: 600;
+    color: #d32f2f;
+    font-size: 0.95rem;
+  }
+  
+  &__location {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  &__website {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    padding: 1rem;
+    
+    &__name {
+      font-size: 1.125rem;
+    }
+  }
+}
