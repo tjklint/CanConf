@@ -3,11 +3,13 @@ import type { Province, Event } from './types'
 import Header from './components/Header'
 import ProvinceFilter from './components/ProvinceFilter'
 import EventSection from './components/EventSection'
+import About from './components/About'
 import eventsData from './data/events.json'
 import './App.scss'
 
 function App() {
   const [selectedProvince, setSelectedProvince] = useState<Province | 'ALL'>('ALL')
+  const [currentPage, setCurrentPage] = useState<'home' | 'about'>('home')
 
   const filteredEvents = useMemo(() => {
     const events = eventsData.events as Event[]
@@ -17,14 +19,37 @@ function App() {
     return events.filter(event => event.province === selectedProvince)
   }, [selectedProvince])
 
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'about':
+        return <About />
+      case 'home':
+      default:
+        return (
+          <>
+            <ProvinceFilter 
+              selectedProvince={selectedProvince}
+              onProvinceChange={setSelectedProvince}
+            />
+            <EventSection events={filteredEvents} />
+          </>
+        )
+    }
+  }
+
+  const handleNavigation = (page: string) => {
+    if (page === 'home' || page === 'about') {
+      setCurrentPage(page)
+    }
+  }
+
   return (
     <div className="app">
-      <Header />
-      <ProvinceFilter 
-        selectedProvince={selectedProvince}
-        onProvinceChange={setSelectedProvince}
+      <Header 
+        currentPage={currentPage}
+        onNavigate={handleNavigation}
       />
-      <EventSection events={filteredEvents} />
+      {renderPage()}
     </div>
   )
 }

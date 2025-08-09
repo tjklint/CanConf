@@ -16,6 +16,14 @@
     font-weight: 700;
     margin: 0;
     color: #d32f2f;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: #b71c1c;
+    }
   }
   
   &__right {
@@ -35,9 +43,18 @@
     font-weight: 500;
     font-size: 1.1rem;
     transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     
     &:hover {
       color: #d32f2f;
+    }
+    
+    &--active {
+      color: #d32f2f;
+      font-weight: 600;
     }
   }
   

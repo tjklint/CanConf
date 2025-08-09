@@ -1,17 +1,39 @@
 import './Header.scss';
 
-const Header = () => {
+interface HeaderProps {
+  currentPage: string;
+  onNavigate: (page: string) => void;
+}
+
+const Header = ({ currentPage, onNavigate }: HeaderProps) => {
   return (
     <header className="header">
       <div className="header__left">
-        <h1 className="header__title">CanConf 🍁</h1>
+        <button 
+          className="header__title"
+          onClick={() => onNavigate('home')}
+        >
+          CanConf 🍁
+        </button>
       </div>
       
       <div className="header__right">
         <nav className="header__nav">
-          <a href="#about" className="header__link">about</a>
+          <button 
+            className={`header__link ${currentPage === 'about' ? 'header__link--active' : ''}`}
+            onClick={() => onNavigate('about')}
+          >
+            about
+          </button>
           <span className="header__separator">•</span>
-          <a href="#contribute" className="header__link">contribute</a>
+          <a 
+            href="https://github.com/tjklint/CanConf/blob/main/.github/CONTRIBUTING.md" 
+            className="header__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            contribute
+          </a>
           <span className="header__separator">•</span>
           <a 
             href="https://github.com/tjklint/CanConf" 
