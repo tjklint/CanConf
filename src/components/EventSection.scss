@@ -1,10 +1,41 @@
 .event-section {
-  display: flex;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
-  gap: 2rem;
   min-height: calc(100vh - 200px);
+  
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  &__tab {
+    padding: 1rem 2rem;
+    border: none;
+    background: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      color: #d32f2f;
+    }
+    
+    &--active {
+      color: #d32f2f;
+      border-bottom-color: #d32f2f;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    gap: 2rem;
+  }
   
   &__column {
     flex: 1;
@@ -51,9 +82,21 @@
 
 @media (max-width: 768px) {
   .event-section {
-    flex-direction: column;
     padding: 1rem;
-    gap: 1rem;
+    
+    &__tabs {
+      margin-bottom: 1rem;
+    }
+    
+    &__tab {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+    
+    &__content {
+      flex-direction: column;
+      gap: 1rem;
+    }
     
     &__divider {
       height: 1px;
