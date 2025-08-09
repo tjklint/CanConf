@@ -109,6 +109,50 @@
       "type": "hackathon",
       "tags": ["hackathon", "calgary", "programming", "student"],
       "isStudentFocused": true
+    },
+    {
+      "id": "11",
+      "name": "DevTO Conference 2024",
+      "date": "November 15, 2024",
+      "location": "Toronto, ON",
+      "website": "https://devto.com",
+      "province": "ON",
+      "type": "conference",
+      "tags": ["development", "community", "tech", "networking"],
+      "isStudentFocused": false
+    },
+    {
+      "id": "12",
+      "name": "Montreal AI Summit 2024",
+      "date": "October 20, 2024",
+      "location": "Montreal, QC",
+      "website": "https://aisummit.ca",
+      "province": "QC",
+      "type": "conference",
+      "tags": ["artificial intelligence", "machine learning", "data science"],
+      "isStudentFocused": false
+    },
+    {
+      "id": "13",
+      "name": "HackWestern 2024",
+      "date": "October 12-14, 2024",
+      "location": "London, ON",
+      "website": "https://hackwestern.com",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "innovation", "technology", "students"],
+      "isStudentFocused": true
+    },
+    {
+      "id": "14",
+      "name": "Vancouver Tech Week 2024",
+      "date": "September 18-22, 2024",
+      "location": "Vancouver, BC",
+      "website": "https://vantechweek.com",
+      "province": "BC",
+      "type": "conference",
+      "tags": ["technology", "startup", "innovation", "networking"],
+      "isStudentFocused": false
     }
   ]
 }
