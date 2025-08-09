@@ -77,8 +77,8 @@ const EventSection = ({ events }: EventSectionProps) => {
           />
           <div className="event-section__events">
             {filteredConferences.length > 0 ? (
-              filteredConferences.map(event => (
-                <EventCard key={event.id} event={event} />
+              filteredConferences.map((event, index) => (
+                <EventCard key={`${event.name}-${event.date}-${index}`} event={event} />
               ))
             ) : (
               <p className="event-section__empty">
@@ -98,8 +98,8 @@ const EventSection = ({ events }: EventSectionProps) => {
           />
           <div className="event-section__events">
             {filteredHackathons.length > 0 ? (
-              filteredHackathons.map(event => (
-                <EventCard key={event.id} event={event} />
+              filteredHackathons.map((event, index) => (
+                <EventCard key={`${event.name}-${event.date}-${index}`} event={event} />
               ))
             ) : (
               <p className="event-section__empty">

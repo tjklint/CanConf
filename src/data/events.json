@@ -1,7 +1,6 @@
 {
   "events": [
     {
-      "id": "1",
       "name": "ReactConf Canada",
       "date": "March 15-16, 2025",
       "location": "Toronto, ON",
@@ -12,7 +11,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "2",
       "name": "TechTO",
       "date": "February 28, 2025",
       "location": "Toronto, ON", 
@@ -23,7 +21,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "3",
       "name": "VanJS",
       "date": "April 12, 2025",
       "location": "Vancouver, BC",
@@ -34,7 +31,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "4",
       "name": "Montreal Tech",
       "date": "May 20, 2025",
       "location": "Montreal, QC",
@@ -45,7 +41,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "5",
       "name": "Calgary Dev Days",
       "date": "June 8-9, 2025",
       "location": "Calgary, AB",
@@ -56,7 +51,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "6",
       "name": "HackTheNorth",
       "date": "September 13-15, 2025",
       "location": "Waterloo, ON",
@@ -67,7 +61,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "7",
       "name": "nwHacks",
       "date": "January 11-13, 2025",
       "location": "Vancouver, BC",
@@ -78,7 +71,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "8",
       "name": "McHacks",
       "date": "February 1-3, 2025",
       "location": "Montreal, QC",
@@ -89,7 +81,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "9",
       "name": "TOHacks",
       "date": "May 17-19, 2025",
       "location": "Toronto, ON",
@@ -100,7 +91,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "10",
       "name": "CalgaryHacks",
       "date": "March 22-24, 2025",
       "location": "Calgary, AB",
@@ -111,7 +101,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "11",
       "name": "DevTO Conference 2024",
       "date": "November 15, 2024",
       "location": "Toronto, ON",
@@ -122,7 +111,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "12",
       "name": "Montreal AI Summit 2024",
       "date": "October 20, 2024",
       "location": "Montreal, QC",
@@ -133,7 +121,6 @@
       "isStudentFocused": false
     },
     {
-      "id": "13",
       "name": "HackWestern 2024",
       "date": "October 12-14, 2024",
       "location": "London, ON",
@@ -144,7 +131,6 @@
       "isStudentFocused": true
     },
     {
-      "id": "14",
       "name": "Vancouver Tech Week 2024",
       "date": "September 18-22, 2024",
       "location": "Vancouver, BC",
