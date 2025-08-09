@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "ReactConf Canada",
+      "date": "March 15-16, 2025",
+      "location": "Toronto, ON",
+      "website": "https://reactconf.ca",
+      "province": "ON",
+      "type": "conference"
+    },
+    {
+      "id": "2",
+      "name": "TechTO",
+      "date": "February 28, 2025",
+      "location": "Toronto, ON", 
+      "website": "https://techto.org",
+      "province": "ON",
+      "type": "conference"
+    },
+    {
+      "id": "3",
+      "name": "VanJS",
+      "date": "April 12, 2025",
+      "location": "Vancouver, BC",
+      "website": "https://vanjs.com",
+      "province": "BC",
+      "type": "conference"
+    },
+    {
+      "id": "4",
+      "name": "Montreal Tech",
+      "date": "May 20, 2025",
+      "location": "Montreal, QC",
+      "website": "https://montrealtech.com",
+      "province": "QC",
+      "type": "conference"
+    },
+    {
+      "id": "5",
+      "name": "Calgary Dev Days",
+      "date": "June 8-9, 2025",
+      "location": "Calgary, AB",
+      "website": "https://calgarydevdays.com",
+      "province": "AB",
+      "type": "conference"
+    },
+    {
+      "id": "6",
+      "name": "HackTheNorth",
+      "date": "September 13-15, 2025",
+      "location": "Waterloo, ON",
+      "website": "https://hackthenorth.com",
+      "province": "ON",
+      "type": "hackathon"
+    },
+    {
+      "id": "7",
+      "name": "nwHacks",
+      "date": "January 11-13, 2025",
+      "location": "Vancouver, BC",
+      "website": "https://nwhacks.io",
+      "province": "BC",
+      "type": "hackathon"
+    },
+    {
+      "id": "8",
+      "name": "McHacks",
+      "date": "February 1-3, 2025",
+      "location": "Montreal, QC",
+      "website": "https://mchacks.ca",
+      "province": "QC",
+      "type": "hackathon"
+    },
+    {
+      "id": "9",
+      "name": "TOHacks",
+      "date": "May 17-19, 2025",
+      "location": "Toronto, ON",
+      "website": "https://tohacks.ca",
+      "province": "ON",
+      "type": "hackathon"
+    },
+    {
+      "id": "10",
+      "name": "CalgaryHacks",
+      "date": "March 22-24, 2025",
+      "location": "Calgary, AB",
+      "website": "https://calgaryhacks.com",
+      "province": "AB",
+      "type": "hackathon"
+    }
+  ]
+}
