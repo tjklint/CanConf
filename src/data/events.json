@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "name": "CUSEC 2026",
+      "date": "January, 2026",
+      "location": "Montreal, QC",
+      "website": "https://2026.cusec.net",
+      "province": "QC",
+      "type": "conference",
+      "tags": ["student", "conference", "canada", "technology", "innovation", "software development"],
+      "isStudentFocused": true
+    },
+    {
       "name": "ReactConf Canada",
       "date": "March 15-16, 2025",
       "location": "Toronto, ON",
