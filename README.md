@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+# CanConf 🍁
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center">
+  Discover Canadian tech conferences, hackathons, and events that could change your career!
+</h3>
 
-Currently, two official plugins are available:
+<h4 align="center">
+Technologies used:
+</h4>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
+    <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="SASS">
+    <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
+</p>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 About CanConf
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+CanConf is a curated directory of Canadian tech events designed to help students and professionals discover conferences, hackathons, and networking opportunities across Canada. Whether you're looking for your first hackathon experience or wanting to stay updated on the latest industry conferences, CanConf makes it easy to find events that match your interests and location.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🗺️ **Province Filtering** - Find events in your province or territory
+- 🔍 **Smart Search** - Search by event name, location, or technology tags
+- 📅 **Event Timeline** - View upcoming events and browse past conferences
+- 🎯 **Student Focus** - Filter for student-friendly events
+- 📱 **Responsive Design** - Perfect experience on desktop and mobile
+- 🏷️ **Tag System** - Discover events by technology, theme, or focus area
+
+## 🎯 Event Types
+
+- **Conferences** - Professional tech conferences and summits
+- **Hackathons** - Coding competitions and innovation challenges
+
+## 🤝 Contributing
+
+We welcome contributions! Help grow the Canadian tech community by adding events to our directory.
+
+### Quick Add
+1. Fork this repository
+2. Add your event to `src/data/events.json`
+3. Submit a pull request
+
+For detailed guidelines, see our [Contributing Guide](.github/CONTRIBUTING.md).
+
+## 🛠️ Development
+
+```bash
+# Clone the repository
+git clone https://github.com/tjklint/CanConf.git
+cd CanConf
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📝 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is open source and available under the [MIT License](LICENSE).
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+<p align="center">
+  <strong>Made with ❤️ for the Canadian tech community</strong>
+</p>
+
+<p align="center">
+  <a href="https://tjklint.github.io/CanConf/">🌐 Visit CanConf</a> • 
+  <a href=".github/CONTRIBUTING.md">🤝 Contribute</a> • 
+  <a href="https://github.com/tjklint/CanConf/issues">🐛 Report Issues</a>
+</p>
