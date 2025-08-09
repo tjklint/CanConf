@@ -1,0 +1,62 @@
+.province-filter {
+  padding: 1.5rem 2rem;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  &__button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d0d0d0;
+    background: white;
+    color: #666;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      border-color: #d32f2f;
+      color: #d32f2f;
+    }
+    
+    &--active {
+      background: #d32f2f;
+      border-color: #d32f2f;
+      color: white;
+      
+      &:hover {
+        background: #b71c1c;
+        border-color: #b71c1c;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .province-filter {
+    padding: 1rem;
+    
+    &__buttons {
+      gap: 0.25rem;
+    }
+    
+    &__button {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+}
