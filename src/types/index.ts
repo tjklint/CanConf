@@ -6,6 +6,8 @@ export interface Event {
   website: string;
   province: string;
   type: 'conference' | 'hackathon';
+  tags: string[];
+  isStudentFocused: boolean;
 }
 
 export type Province = 
