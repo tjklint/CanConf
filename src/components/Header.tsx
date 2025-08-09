@@ -14,7 +14,7 @@ const Header = () => {
           <a href="#contribute" className="header__link">contribute</a>
           <span className="header__separator">•</span>
           <a 
-            href="https://github.com/username/CanConf.github.io" 
+            href="https://github.com/tjklint/CanConf" 
             className="header__github"
             target="_blank"
             rel="noopener noreferrer"
