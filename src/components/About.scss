@@ -4,15 +4,15 @@
   padding: 2rem 0;
   
   &__container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
   }
   
   &__content {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 4rem;
+    grid-template-columns: 320px 1fr;
+    gap: 1.0rem;
     align-items: start;
     background: white;
     border-radius: 16px;
@@ -26,9 +26,9 @@
   }
   
   &__photo-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
     object-fit: cover;
     object-position: center;
     box-shadow: 0 8px 24px rgba(211, 47, 47, 0.3);
@@ -41,15 +41,15 @@
     }
     
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
       box-shadow: 0 12px 32px rgba(211, 47, 47, 0.4);
     }
   }
   
   &__photo-placeholder {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
     background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
       box-shadow: 0 12px 32px rgba(211, 47, 47, 0.4);
     }
   }
@@ -159,13 +159,13 @@
     }
     
     &__photo-image {
-      width: 200px;
-      height: 200px;
+      width: 240px;
+      height: 300px;
     }
     
     &__photo-placeholder {
-      width: 200px;
-      height: 200px;
+      width: 240px;
+      height: 300px;
     }
     
     &__photo-initials {
