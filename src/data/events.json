@@ -7,7 +7,9 @@
       "location": "Toronto, ON",
       "website": "https://reactconf.ca",
       "province": "ON",
-      "type": "conference"
+      "type": "conference",
+      "tags": ["react", "javascript", "frontend", "web development"],
+      "isStudentFocused": false
     },
     {
       "id": "2",
@@ -16,7 +18,9 @@
       "location": "Toronto, ON", 
       "website": "https://techto.org",
       "province": "ON",
-      "type": "conference"
+      "type": "conference",
+      "tags": ["networking", "startup", "technology", "innovation"],
+      "isStudentFocused": false
     },
     {
       "id": "3",
@@ -25,7 +29,9 @@
       "location": "Vancouver, BC",
       "website": "https://vanjs.com",
       "province": "BC",
-      "type": "conference"
+      "type": "conference",
+      "tags": ["javascript", "web development", "frontend", "nodejs"],
+      "isStudentFocused": false
     },
     {
       "id": "4",
@@ -34,7 +40,9 @@
       "location": "Montreal, QC",
       "website": "https://montrealtech.com",
       "province": "QC",
-      "type": "conference"
+      "type": "conference",
+      "tags": ["technology", "innovation", "startup", "ai"],
+      "isStudentFocused": false
     },
     {
       "id": "5",
@@ -43,7 +51,9 @@
       "location": "Calgary, AB",
       "website": "https://calgarydevdays.com",
       "province": "AB",
-      "type": "conference"
+      "type": "conference",
+      "tags": ["software development", "programming", "devops", "cloud"],
+      "isStudentFocused": false
     },
     {
       "id": "6",
@@ -52,7 +62,9 @@
       "location": "Waterloo, ON",
       "website": "https://hackthenorth.com",
       "province": "ON",
-      "type": "hackathon"
+      "type": "hackathon",
+      "tags": ["hackathon", "programming", "innovation", "competition"],
+      "isStudentFocused": true
     },
     {
       "id": "7",
@@ -61,7 +73,9 @@
       "location": "Vancouver, BC",
       "website": "https://nwhacks.io",
       "province": "BC",
-      "type": "hackathon"
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "programming", "technology"],
+      "isStudentFocused": true
     },
     {
       "id": "8",
@@ -70,7 +84,9 @@
       "location": "Montreal, QC",
       "website": "https://mchacks.ca",
       "province": "QC",
-      "type": "hackathon"
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "mcgill", "programming"],
+      "isStudentFocused": true
     },
     {
       "id": "9",
@@ -79,7 +95,9 @@
       "location": "Toronto, ON",
       "website": "https://tohacks.ca",
       "province": "ON",
-      "type": "hackathon"
+      "type": "hackathon",
+      "tags": ["hackathon", "toronto", "student", "innovation"],
+      "isStudentFocused": true
     },
     {
       "id": "10",
@@ -88,7 +106,9 @@
       "location": "Calgary, AB",
       "website": "https://calgaryhacks.com",
       "province": "AB",
-      "type": "hackathon"
+      "type": "hackathon",
+      "tags": ["hackathon", "calgary", "programming", "student"],
+      "isStudentFocused": true
     }
   ]
 }
