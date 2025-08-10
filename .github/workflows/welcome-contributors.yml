@@ -6,31 +6,37 @@ on:
     branches: [main]
 
 permissions:
-  issues: write
-  pull-requests: write
   contents: read
-  metadata: read
 
 jobs:
   welcome:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Get PR info
-        id: pr-info
+      - name: Welcome New Contributor
         run: |
-          echo "username=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
-          echo "pr_number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          echo "🎉 Welcome to CanConf, @${{ github.event.pull_request.user.login }}!"
+          echo ""
+          echo "PR #${{ github.event.pull_request.number }}: ${{ github.event.pull_request.title }}"
+          echo "Author: ${{ github.event.pull_request.user.login }}"
+          echo "Profile: ${{ github.event.pull_request.user.html_url }}"
+          echo ""
+          echo "Your contribution helps make Canadian tech events more discoverable for everyone! 🇨🇦"
+          echo ""
+          echo "Once this PR is merged, you'll be automatically added to our contributors list on the website."
+          echo ""
+          echo "Thank you for contributing to the Canadian tech community!"
 
-      - name: Comment on PR
+      # Optional: Try to comment if PAT_TOKEN is available, but don't fail if it's not
+      - name: Try to post welcome comment (optional)
+        continue-on-error: true
+        if: ${{ secrets.PAT_TOKEN != '' }}
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.PAT_TOKEN }}
           script: |
-            const username = "${{ steps.pr-info.outputs.username }}";
-            const prNumber = ${{ steps.pr-info.outputs.pr_number }};
-            
-            console.log(`PR #${prNumber} opened by: ${username}`);
+            const username = "${{ github.event.pull_request.user.login }}";
+            const prNumber = ${{ github.event.pull_request.number }};
             
             const message = `🎉 Thank you for contributing to CanConf, @${username}! 
             
@@ -48,16 +54,8 @@ jobs:
                 repo: context.repo.repo,
                 body: message
               });
-              console.log('Welcome comment posted successfully!', result.data.html_url);
+              console.log('✅ Welcome comment posted successfully!');
             } catch (error) {
-              console.error('Failed to post comment:', error);
-              console.error('Error details:', JSON.stringify(error.response?.data, null, 2));
-              
-              // Log the welcome message even if we can't post it
-              console.log('\n=== WELCOME MESSAGE (could not post as comment) ===');
-              console.log(message);
-              console.log('=== END WELCOME MESSAGE ===\n');
-              
-              // Don't fail the workflow, just log the error
-              console.log('Continuing workflow despite comment failure...');
+              console.log('ℹ️ Could not post comment (this is expected if PAT_TOKEN is not configured)');
+              console.log('Welcome message is shown in the workflow logs above instead.');
             }
