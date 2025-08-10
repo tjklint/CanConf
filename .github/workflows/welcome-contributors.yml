@@ -1,11 +1,13 @@
 name: Welcome New Contributors
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened]
     branches: [main]
 
 permissions:
+  pull-requests: write
+  issues: write
   contents: read
 
 jobs:
@@ -27,13 +29,10 @@ jobs:
           echo ""
           echo "Thank you for contributing to the Canadian tech community!"
 
-      # Optional: Try to comment if PAT_TOKEN is available, but don't fail if it's not
-      - name: Try to post welcome comment (optional)
-        continue-on-error: true
-        if: ${{ secrets.PAT_TOKEN != '' }}
+      - name: Post welcome comment
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.PAT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const username = "${{ github.event.pull_request.user.login }}";
             const prNumber = ${{ github.event.pull_request.number }};
@@ -55,7 +54,9 @@ jobs:
                 body: message
               });
               console.log('✅ Welcome comment posted successfully!');
+              console.log('Comment URL:', result.data.html_url);
             } catch (error) {
-              console.log('ℹ️ Could not post comment (this is expected if PAT_TOKEN is not configured)');
-              console.log('Welcome message is shown in the workflow logs above instead.');
+              console.error('❌ Failed to post comment:', error.message);
+              console.log('ℹ️ This might be due to insufficient permissions or the PR being from a fork.');
+              console.log('The welcome message above is still visible in the workflow logs.');
             }
