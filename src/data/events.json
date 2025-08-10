@@ -1,6 +1,36 @@
 {
   "events": [
     {
+      "name": "NewHacks",
+      "date": "October 25-26, 2025",
+      "location": "Toronto, ON",
+      "website": "https://newhacks.ca/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "beginner", "mlh", "student", "uoft", "canada", "programming", "competition"],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hack the Valley",
+      "date": "October 3-5, 2025",
+      "location": "Scarborough, ON",
+      "website": "https://hackthevalley.io/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "mlh", "uoft", "canada", "programming", "competition"],
+      "isStudentFocused": true
+    },    
+    {
+      "name": "Waterloo Tech Week",
+      "date": "Sep 8-11, 2025",
+      "location": "Waterloo, ON",
+      "website": "https://waterlootechweek.ca/",
+      "province": "ON",
+      "type": "conference",
+      "tags": ["ctf", "student", "startup", "conference", "canada", "technology", "innovation", "software development"],
+      "isStudentFocused": false
+    },
+    {
       "name": "CUSEC 2026",
       "date": "January, 2026",
       "location": "Montreal, QC",
@@ -61,13 +91,13 @@
       "isStudentFocused": false
     },
     {
-      "name": "HackTheNorth",
+      "name": "Hack the North",
       "date": "September 13-15, 2025",
       "location": "Waterloo, ON",
       "website": "https://hackthenorth.com",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "programming", "innovation", "competition"],
+      "tags": ["hackathon","mlh","programming", "innovation", "competition"],
       "isStudentFocused": true
     },
     {
