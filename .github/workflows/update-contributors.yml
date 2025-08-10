@@ -1,0 +1,149 @@
+name: Update Contributors
+
+on:
+  pull_request:
+    types: [opened, closed]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  update-contributors:
+    if: github.event.pull_request.merged == true || github.event.action == 'opened'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Get contributor info
+        id: contributor
+        run: |
+          echo "username=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
+          echo "avatar_url=${{ github.event.pull_request.user.avatar_url }}" >> $GITHUB_OUTPUT
+          echo "github_url=${{ github.event.pull_request.user.html_url }}" >> $GITHUB_OUTPUT
+          echo "pr_number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          echo "pr_title=${{ github.event.pull_request.title }}" >> $GITHUB_OUTPUT
+          echo "current_date=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          echo "current_datetime=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
+
+      - name: Update contributors file
+        run: |
+          # Create update script
+          cat << 'EOF' > update_contributors.js
+          const fs = require('fs');
+          const path = require('path');
+          
+          const contributorsPath = path.join('src', 'data', 'contributors.json');
+          const username = process.env.CONTRIBUTOR_USERNAME;
+          const avatarUrl = process.env.CONTRIBUTOR_AVATAR;
+          const githubUrl = process.env.CONTRIBUTOR_GITHUB_URL;
+          const currentDate = process.env.CURRENT_DATE;
+          const currentDateTime = process.env.CURRENT_DATETIME;
+          
+          // Read existing contributors
+          let contributors;
+          try {
+            const data = fs.readFileSync(contributorsPath, 'utf8');
+            contributors = JSON.parse(data);
+          } catch (error) {
+            contributors = { contributors: [], lastUpdated: currentDateTime };
+          }
+          
+          // Find existing contributor or create new one
+          let existingContributor = contributors.contributors.find(c => c.username === username);
+          
+          if (existingContributor) {
+            // Update existing contributor
+            existingContributor.contributions += 1;
+            existingContributor.lastContribution = currentDate;
+            existingContributor.avatarUrl = avatarUrl; // Update avatar URL in case it changed
+          } else {
+            // Add new contributor
+            contributors.contributors.push({
+              username: username,
+              githubUrl: githubUrl,
+              avatarUrl: avatarUrl,
+              contributions: 1,
+              firstContribution: currentDate,
+              lastContribution: currentDate
+            });
+          }
+          
+          // Sort contributors by contribution count (descending) then by first contribution (ascending)
+          contributors.contributors.sort((a, b) => {
+            if (b.contributions !== a.contributions) {
+              return b.contributions - a.contributions;
+            }
+            return new Date(a.firstContribution) - new Date(b.firstContribution);
+          });
+          
+          // Update timestamp
+          contributors.lastUpdated = currentDateTime;
+          
+          // Write back to file
+          fs.writeFileSync(contributorsPath, JSON.stringify(contributors, null, 2) + '\n');
+          
+          console.log(`Updated contributor: ${username} (${existingContributor ? 'existing' : 'new'})`);
+          console.log(`Total contributions: ${existingContributor ? existingContributor.contributions : 1}`);
+          EOF
+
+          # Run the update script
+          CONTRIBUTOR_USERNAME="${{ steps.contributor.outputs.username }}" \
+          CONTRIBUTOR_AVATAR="${{ steps.contributor.outputs.avatar_url }}" \
+          CONTRIBUTOR_GITHUB_URL="${{ steps.contributor.outputs.github_url }}" \
+          CURRENT_DATE="${{ steps.contributor.outputs.current_date }}" \
+          CURRENT_DATETIME="${{ steps.contributor.outputs.current_datetime }}" \
+          node update_contributors.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/contributors.json; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/data/contributors.json
+          git commit -m "🤝 Update contributors: @${{ steps.contributor.outputs.username }} (#${{ steps.contributor.outputs.pr_number }})"
+          git push
+
+      - name: Comment on PR
+        if: github.event.action == 'opened'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { username } = context.payload.pull_request.user;
+            const prNumber = context.payload.pull_request.number;
+            
+            const message = `🎉 Thank you for contributing to CanConf, @${username}! 
+            
+            Your contribution helps make Canadian tech events more discoverable for everyone. 🇨🇦
+            
+            Once this PR is merged, you'll be automatically added to our contributors list on the website!
+            
+            ---
+            *This comment was automatically generated by our contributor recognition system.*`;
+            
+            github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
