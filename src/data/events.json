@@ -1,6 +1,36 @@
 {
   "events": [
     {
+      "name": "SpurHacks",
+      "date": "June 20-22, 2025",
+      "location": "Waterloo, ON",
+      "website": "https://spurhacks.com/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "canada", "quantum", "web3", "programming", "innovation", "competition"],
+      "isStudentFocused": true
+    },    
+    {
+      "name": "Hack404",
+      "date": "July 4-6, 2025",
+      "location": "Toronto, ON",
+      "website": "https://hack404.dev/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "social good", "canada", "programming", "innovation", "competition"],
+      "isStudentFocused": true
+    },    
+    {
+      "name": "Hack the 6ix 2025",
+      "date": "July 18-20, 2025",
+      "location": "Toronto, ON",
+      "website": "https://hackthe6ix.com/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition"],
+      "isStudentFocused": true
+    },    
+    {
       "name": "AI Tinkerers Hackathon 3.0",
       "date": "Sep 6-7, 2025",
       "location": "Ottawa, ON",
