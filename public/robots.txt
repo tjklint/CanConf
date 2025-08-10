@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tjklint.github.io/CanConf/sitemap.xml
+
+# Allow search engines to crawl and index all content
+Crawl-delay: 1
+
+# Specific instructions for common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
