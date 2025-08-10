@@ -199,6 +199,16 @@
       "type": "conference",
       "tags": ["technology", "startup", "innovation", "networking"],
       "isStudentFocused": false
+    },
+    {
+      "name": "EasyA Consensus Toronto Hackathon",
+      "date": "May 14-16, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.easya.io/events/easya-consensus-toronto-hackathon",
+      "province": "ON",
+      "type": "conference",
+      "tags": ["blockchain", "crypto", "web3", "networking"],
+      "isStudentFocused": false
     }
   ]
 }
