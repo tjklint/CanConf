@@ -3,10 +3,18 @@
     {
       "username": "tjklint",
       "githubUrl": "https://github.com/tjklint",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/112092190?v=4",
-      "contributions": 3,
+      "avatarUrl": "https://github.com/tjklint.png",
+      "contributions": 21,
       "firstContribution": "2025-08-10",
       "lastContribution": "2025-08-10"
+    },
+    {
+        "username": "marmishaw14",
+        "githubUrl": "https://github.com/marmishaw14",
+        "avatarUrl": "https://github.com/marmishaw14.png",
+        "contributions": 3,
+        "firstContribution": "2025-08-10",
+        "lastContribution": "2025-08-10"
     }
   ],
   "lastUpdated": "2025-08-10T06:00:20Z"
