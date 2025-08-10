@@ -1,0 +1,36 @@
+{
+  "name": "CanConf - Canadian Tech Events",
+  "short_name": "CanConf",
+  "description": "Discover Canadian tech conferences, hackathons, and events",
+  "start_url": "/CanConf/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d32f2f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/CanConf/maple-leaf.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/CanConf/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/CanConf/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/CanConf/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "technology", "events"],
+  "lang": "en-CA",
+  "scope": "/CanConf/"
+}
