@@ -40,7 +40,7 @@ jobs:
       - name: Update contributors file
         run: |
           # Create update script
-          cat << 'EOF' > update_contributors.js
+          cat << 'EOF' > update_contributors.cjs
           const fs = require('fs');
           const path = require('path');
           
@@ -104,7 +104,7 @@ jobs:
           CONTRIBUTOR_GITHUB_URL="${{ steps.contributor.outputs.github_url }}" \
           CURRENT_DATE="${{ steps.contributor.outputs.current_date }}" \
           CURRENT_DATETIME="${{ steps.contributor.outputs.current_datetime }}" \
-          node update_contributors.js
+          node update_contributors.cjs
 
       - name: Check for changes
         id: changes
