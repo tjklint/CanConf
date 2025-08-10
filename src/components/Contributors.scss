@@ -1,0 +1,173 @@
+.contributors {
+  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+  padding: 4rem 0;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 1rem 0;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    margin: 0 0 3rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  &__card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-color: #d32f2f;
+    }
+    
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+  
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+    
+    .contributors__card:hover & {
+      border-color: #d32f2f;
+    }
+    
+    @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  &__info {
+    flex: 1;
+    text-align: left;
+  }
+  
+  &__username {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  &__contributions {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #d32f2f;
+  }
+  
+  &__date {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  &__cta {
+    background: white;
+    border: 2px dashed #d32f2f;
+    border-radius: 12px;
+    padding: 2rem;
+    
+    p {
+      font-size: 1.125rem;
+      color: #666;
+      margin: 0 0 1rem 0;
+    }
+  }
+  
+  &__contribute-link {
+    display: inline-block;
+    background: #d32f2f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background: #b71c1c;
+    }
+  }
+}
+
+// Special styling for the founder (first contributor)
+.contributors__card:first-child {
+  position: relative;
+  
+  &::before {
+    content: "👑";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #d32f2f;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
