@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "name": "UofTHacks",
+      "date": "January 2026",
+      "location": "Toronto, ON",
+      "website": "https://uofthacks.com/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "mlh", "student", "uoft", "canada", "programming", "competition"],
+      "isStudentFocused": true
+    },    
+    {
       "name": "NewHacks",
       "date": "October 25-26, 2025",
       "location": "Toronto, ON",
