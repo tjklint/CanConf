@@ -8,7 +8,12 @@ interface EventCardProps {
 const EventCard = ({ event }: EventCardProps) => {
   return (
     <div className="event-card">
-      <h3 className="event-card__name">{event.name}</h3>
+      <div className="event-card__header">
+        <h3 className="event-card__name">{event.name}</h3>
+        {event.isStudentFocused && (
+          <span className="event-card__student-badge">Student</span>
+        )}
+      </div>
       <div className="event-card__details">
         <p className="event-card__date">{event.date}</p>
         <p className="event-card__location">{event.location}</p>
