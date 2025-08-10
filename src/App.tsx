@@ -3,6 +3,7 @@ import type { Province, Event } from './types'
 import Header from './components/Header'
 import ProvinceFilter from './components/ProvinceFilter'
 import EventSection from './components/EventSection'
+import EventStructuredData from './components/EventStructuredData'
 import About from './components/About'
 import eventsData from './data/events.json'
 import './App.scss'
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <div className="app">
+      <EventStructuredData events={eventsData.events as Event[]} />
       <Header 
         currentPage={currentPage}
         onNavigate={handleNavigation}
