@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "name": "AI Tinkerers Hackathon 3.0",
+      "date": "Sep 6-7, 2025",
+      "location": "Ottawa, ON",
+      "website": "https://lu.ma/9k96tg5z",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "ai", "vibe coding", "canada", "programming", "competition"],
+      "isStudentFocused": false
+    },    
+    {
       "name": "UofTHacks",
       "date": "January 2026",
       "location": "Toronto, ON",
