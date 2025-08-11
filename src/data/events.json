@@ -1,5 +1,45 @@
 {
   "events": [
+    {
+  "name": "Web Summit Vancouver",
+  "date": "May 27-30, 2025",
+  "location": "Vancouver, BC",
+  "website": "https://vancouver.websummit.com/",
+  "province": "BC",
+  "type": "conference",
+  "tags": ["tech", "startup", "innovation", "global", "enterprise", "investment", "vancouver", "canada", "web-summit", "networking", "flagship", "international"],
+  "isStudentFocused": false
+},
+    {
+  "name": "SecTor 2025",
+  "date": "September 30, 2025",
+  "location": "Toronto, ON",
+  "website": "https://www.blackhat.com/sector/2025/",
+  "province": "ON",
+  "type": "conference",
+  "tags": ["cybersecurity", "infosec", "security", "toronto", "canada", "enterprise", "hacking", "defense", "blackhat", "underground-threats", "corporate-defense"],
+  "isStudentFocused": false
+    },
+      {
+      "name": "ConFoo Montreal 2026",
+      "date": "February 25-27, 2026",
+      "location": "Montreal, QC",
+      "website": "https://confoo.ca/en/2026",
+      "province": "QC",
+      "type": "conference",
+      "tags": ["developer", "fullstack", "php", "python", "javascript", "nodejs", ".net", "web-development", "canada", "montreal", "multi-technology"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "PyCascades 2026",
+      "date": "March 21-22, 2026",
+      "location": "Vancouver, BC",
+      "website": "https://2026.pycascades.com",
+      "province": "BC",
+      "type": "conference",
+      "tags": ["python", "programming", "developer", "pacific-northwest", "vancouver", "canada", "community", "pycon", "west-coast"],
+      "isStudentFocused": false
+    },
    {
      "name": "TechNova",
      "date": "Sep 26-28, 2026",
