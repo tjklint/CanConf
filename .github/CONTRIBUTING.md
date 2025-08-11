@@ -109,6 +109,16 @@ npm run build
    - List of events added in the description
    - Any relevant links or context
 
+## 🎉 Contributor Recognition
+
+When you open a pull request, our automated system will:
+- **Automatically credit you** on the CanConf website
+- **Add your GitHub profile** to our contributors section
+- **Track your contributions** over time
+- **Send you a thank you message** 🙏
+
+Your contributions help make Canadian tech events more discoverable for everyone!
+
 ## Questions?
 
 Feel free to [open an issue](https://github.com/tjklint/CanConf/issues) if you have questions about contributing!

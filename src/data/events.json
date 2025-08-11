@@ -41,6 +41,16 @@
       "isStudentFocused": false
     },    
     {
+      "name": "ConUHacks X",
+      "date": "January 24-25, 2026",
+      "location": "Montreal, QC",
+      "website": "https://www.conuhacks.io/",
+      "province": "QC",
+      "type": "hackathon",
+      "tags": ["hackathon", "mlh", "student", "conU", "concordia", "canada", "programming", "competition"],
+      "isStudentFocused": true
+    },
+    {
       "name": "UofTHacks",
       "date": "January 2026",
       "location": "Toronto, ON",
@@ -228,6 +238,16 @@
       "province": "BC",
       "type": "conference",
       "tags": ["technology", "startup", "innovation", "networking"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "EasyA Consensus Toronto Hackathon",
+      "date": "May 14-16, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.easya.io/events/easya-consensus-toronto-hackathon",
+      "province": "ON",
+      "type": "conference",
+      "tags": ["blockchain", "crypto", "web3", "networking"],
       "isStudentFocused": false
     }
   ]

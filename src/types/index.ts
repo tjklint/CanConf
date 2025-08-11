@@ -9,6 +9,15 @@ export interface Event {
   isStudentFocused: boolean;
 }
 
+export interface Contributor {
+  username: string;
+  githubUrl: string;
+  avatarUrl: string;
+  contributions: number;
+  firstContribution: string;
+  lastContribution: string;
+}
+
 export type Province = 
   | 'AB' // Alberta
   | 'BC' // British Columbia  

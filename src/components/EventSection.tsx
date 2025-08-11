@@ -1,18 +1,23 @@
 import { useState, useMemo, useCallback } from 'react';
-import type { Event as EventType } from '../types';
+import type { Event as EventType, Province } from '../types';
 import EventCard from './EventCard';
 import SearchBar from './SearchBar';
+import ProvinceFilter from './ProvinceFilter';
 import { sortEventsByDate, isEventPast } from '../utils/dateUtils';
 import './EventSection.scss';
 
 interface EventSectionProps {
   events: EventType[];
+  selectedProvince: Province | 'ALL';
+  onProvinceChange: (province: Province | 'ALL') => void;
 }
 
-const EventSection = ({ events }: EventSectionProps) => {
+const EventSection = ({ events, selectedProvince, onProvinceChange }: EventSectionProps) => {
   const [conferenceSearch, setConferenceSearch] = useState('');
   const [hackathonSearch, setHackathonSearch] = useState('');
   const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
+  const [showAllConferences, setShowAllConferences] = useState(false);
+  const [showAllHackathons, setShowAllHackathons] = useState(false);
 
   const filterAndSortEvents = useCallback((events: EventType[], searchQuery: string, eventType: 'conference' | 'hackathon') => {
     // Filter by event type
@@ -42,12 +47,64 @@ const EventSection = ({ events }: EventSectionProps) => {
 
   const filteredConferences = useMemo(() => 
     filterAndSortEvents(events, conferenceSearch, 'conference'), 
-    [events, conferenceSearch, activeTab]
+    [events, conferenceSearch, filterAndSortEvents]
   );
 
   const filteredHackathons = useMemo(() => 
     filterAndSortEvents(events, hackathonSearch, 'hackathon'), 
-    [events, hackathonSearch, activeTab]
+    [events, hackathonSearch, filterAndSortEvents]
+  );
+
+  // Limit displayed events to 5 unless "show all" is toggled
+  const displayedConferences = showAllConferences ? filteredConferences : filteredConferences.slice(0, 5);
+  const displayedHackathons = showAllHackathons ? filteredHackathons : filteredHackathons.slice(0, 5);
+
+  const renderEventColumn = (
+    title: string,
+    displayedEvents: EventType[],
+    allEvents: EventType[],
+    searchQuery: string,
+    onSearch: (query: string) => void,
+    placeholder: string,
+    showAll: boolean,
+    setShowAll: (show: boolean) => void
+  ) => (
+    <div className="event-section__column">
+      <h2 className="event-section__title">{title}</h2>
+      <SearchBar 
+        onSearch={onSearch}
+        placeholder={placeholder}
+      />
+      <div className="event-section__events">
+        {displayedEvents.length > 0 ? (
+          <>
+            {displayedEvents.map((event, index) => (
+              <EventCard key={`${event.name}-${event.date}-${index}`} event={event} />
+            ))}
+            {allEvents.length > 5 && !showAll && (
+              <button 
+                className="event-section__see-more"
+                onClick={() => setShowAll(true)}
+              >
+                See All {allEvents.length} {title} ({allEvents.length - 5} more)
+              </button>
+            )}
+            {allEvents.length > 5 && showAll && (
+              <button 
+                className="event-section__see-less"
+                onClick={() => setShowAll(false)}
+              >
+                Show Less
+              </button>
+            )}
+          </>
+        ) : (
+          <p className="event-section__empty">
+            {searchQuery ? `No ${title.toLowerCase()} match your search in ${activeTab} events.` : `No ${activeTab} ${title.toLowerCase()} found for the selected province.`}
+          </p>
+        )}
+      </div>
+    </div>
   );
 
   return (
@@ -68,46 +125,38 @@ const EventSection = ({ events }: EventSectionProps) => {
         </button>
       </div>
 
+      {/* Province Filter - moved under tabs */}
+      <div className="event-section__filters">
+        <ProvinceFilter 
+          selectedProvince={selectedProvince}
+          onProvinceChange={onProvinceChange}
+        />
+      </div>
+
       <div className="event-section__content">
-        <div className="event-section__column">
-          <h2 className="event-section__title">Conferences</h2>
-          <SearchBar 
-            onSearch={setConferenceSearch}
-            placeholder="Search conferences... (City, Name, Tags)"
-          />
-          <div className="event-section__events">
-            {filteredConferences.length > 0 ? (
-              filteredConferences.map((event, index) => (
-                <EventCard key={`${event.name}-${event.date}-${index}`} event={event} />
-              ))
-            ) : (
-              <p className="event-section__empty">
-                {conferenceSearch ? `No conferences match your search in ${activeTab} events.` : `No ${activeTab} conferences found for the selected province.`}
-              </p>
-            )}
-          </div>
-        </div>
+        {renderEventColumn(
+          'Conferences',
+          displayedConferences,
+          filteredConferences,
+          conferenceSearch,
+          setConferenceSearch,
+          'Search conferences... (City, Name, Tags)',
+          showAllConferences,
+          setShowAllConferences
+        )}
         
         <div className="event-section__divider"></div>
         
-        <div className="event-section__column">
-          <h2 className="event-section__title">Hackathons</h2>
-          <SearchBar 
-            onSearch={setHackathonSearch}
-            placeholder="Search hackathons... (City, Name, Tags)"
-          />
-          <div className="event-section__events">
-            {filteredHackathons.length > 0 ? (
-              filteredHackathons.map((event, index) => (
-                <EventCard key={`${event.name}-${event.date}-${index}`} event={event} />
-              ))
-            ) : (
-              <p className="event-section__empty">
-                {hackathonSearch ? `No hackathons match your search in ${activeTab} events.` : `No ${activeTab} hackathons found for the selected province.`}
-              </p>
-            )}
-          </div>
-        </div>
+        {renderEventColumn(
+          'Hackathons',
+          displayedHackathons,
+          filteredHackathons,
+          hackathonSearch,
+          setHackathonSearch,
+          'Search hackathons... (City, Name, Tags)',
+          showAllHackathons,
+          setShowAllHackathons
+        )}
       </div>
     </div>
   );

@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:  # Allow manual triggering
+  workflow_run:       # Trigger when other workflows complete
+    workflows: ["Update Contributors"]
+    types:
+      - completed
+    branches: [main]
 
 jobs:
   deploy:

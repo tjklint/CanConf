@@ -1,8 +1,9 @@
 import { useState, useMemo } from 'react'
 import type { Province, Event } from './types'
 import Header from './components/Header'
-import ProvinceFilter from './components/ProvinceFilter'
 import EventSection from './components/EventSection'
+import EventStructuredData from './components/EventStructuredData'
+import Contributors from './components/Contributors'
 import About from './components/About'
 import eventsData from './data/events.json'
 import './App.scss'
@@ -27,11 +28,12 @@ function App() {
       default:
         return (
           <>
-            <ProvinceFilter 
+            <EventSection 
+              events={filteredEvents}
               selectedProvince={selectedProvince}
               onProvinceChange={setSelectedProvince}
             />
-            <EventSection events={filteredEvents} />
+            <Contributors />
           </>
         )
     }
@@ -45,6 +47,7 @@ function App() {
 
   return (
     <div className="app">
+      <EventStructuredData events={eventsData.events as Event[]} />
       <Header 
         currentPage={currentPage}
         onNavigate={handleNavigation}

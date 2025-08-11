@@ -21,6 +21,13 @@
     cursor: pointer;
     transition: color 0.2s ease;
     
+    h1 {
+      margin: 0;
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+    
     &:hover {
       color: #b71c1c;
     }
