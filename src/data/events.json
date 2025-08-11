@@ -1,5 +1,85 @@
 {
   "events": [
+   {
+     "name": "TechNova",
+     "date": "Sep 26-28, 2026",
+     "location": "Waterloo, ON",
+     "website": "https://itstechnova.org/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "diversity", "women-in-tech", "non-binary", "inclusive", "waterloo", "university"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "Hack Western",
+     "date": "Nov 21-23, 2026",
+     "location": "London, ON",
+     "website": "https://www.hackwestern.com/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "western-university", "london", "innovation", "tech", "beginner-friendly", "workshops"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "DeltaHacks",
+     "date": "Jan 10-11, 2026",
+     "location": "Hamilton, ON",
+     "website": "https://www.deltahacks.com/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "mcmaster", "hamilton", "change", "social-good", "impact", "innovation"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "ElleHacks",
+     "date": "Jan 23-25, 2026",
+     "location": "Toronto, ON",
+     "website": "https://ellehacks.com/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "women-in-tech", "non-binary", "diversity", "inclusive", "toronto", "empowerment", "networking"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "UTRA Hacks 2026",
+     "date": "Jan 31 - Feb 1, 2026",
+     "location": "Toronto, ON",
+     "website": "https://hackathon.utra.ca/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "uoft", "toronto", "robotics", "automation", "engineering", "hardware", "ai"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "QHacks",
+     "date": "Feb 6-8, 2026",
+     "location": "Kingston, ON",
+     "website": "https://qhacks.io/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "queens-university", "kingston", "innovation", "tech", "entrepreneurship", "startups"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "cmd-f 2026",
+     "date": "Mar 7-8, 2026",
+     "location": "Vancouver, BC",
+     "website": "https://cmd-f.nwplus.io/",
+     "province": "BC",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "women-in-tech", "non-binary", "diversity", "vancouver", "ubc", "inclusive", "west-coast"],
+     "isStudentFocused": true
+   },
+   {
+     "name": "TerraHacks",
+     "date": "Aug 1-3, 2026",
+     "location": "Toronto, ON",
+     "website": "https://terrahacks.ca/",
+     "province": "ON",
+     "type": "hackathon",
+     "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "sustainability", "climate", "environment", "green-tech", "toronto", "social-impact", "earth"],
+     "isStudentFocused": true
+   },
     {
       "name": "SpurHacks",
       "date": "June 20-22, 2025",
