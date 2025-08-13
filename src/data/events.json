@@ -21,6 +21,16 @@
       "isStudentFocused": false
     },
     {
+      "name": "/dev/mtl 2025",
+      "date": "Nov 28, 2025",
+      "location": "Montreal, QC",
+      "website": "https://www.dev-mtl.ca",
+      "province": "QC",
+      "type": "conference",
+      "tags": ["canada", "quebec", "montreal", "programming", "multi-technology", "front-end", "back-end", "web-development", "tests", "beginner-friendly", "diversity", "community", "meetups"],
+      "isStudentFocused": false
+    },
+    {
       "name": "ConFoo Montreal 2026",
       "date": "February 25-27, 2026",
       "location": "Montreal, QC",
