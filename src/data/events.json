@@ -1,6 +1,16 @@
 {
   "events": [
     {
+      "name": "StarterHacks",
+      "date": "January 2026",
+      "location": "Waterloo, ON",
+      "website": "https://www.starterhacks.ca/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": ["hackathon", "beginner", "student", "mlh", "canada", "programming", "competition", "waterloo", "first-time-hackers", "learning", "collaboration", "first-year"],
+      "isStudentFocused": true
+    },
+    {
       "name": "Web Summit Vancouver",
       "date": "May 27-30, 2025",
       "location": "Vancouver, BC",
