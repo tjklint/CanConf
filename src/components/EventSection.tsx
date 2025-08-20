@@ -15,11 +15,13 @@ interface EventSectionProps {
 const EventSection = ({ events, selectedProvince, onProvinceChange }: EventSectionProps) => {
   const [conferenceSearch, setConferenceSearch] = useState('');
   const [hackathonSearch, setHackathonSearch] = useState('');
+  const [meetupSearch, setMeetupSearch] = useState('');
   const [activeTab, setActiveTab] = useState<'upcoming' | 'past'>('upcoming');
   const [showAllConferences, setShowAllConferences] = useState(false);
   const [showAllHackathons, setShowAllHackathons] = useState(false);
+  const [showAllMeetups, setShowAllMeetups] = useState(false);
 
-  const filterAndSortEvents = useCallback((events: EventType[], searchQuery: string, eventType: 'conference' | 'hackathon') => {
+  const filterAndSortEvents = useCallback((events: EventType[], searchQuery: string, eventType: 'conference' | 'hackathon' | 'meetup') => {
     // Filter by event type
     const filteredEvents = events.filter(event => event.type === eventType);
     
