@@ -302,7 +302,8 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon","mlh","programming", "innovation", "competition"],
-      "isStudentFocused": true
+      "isStudentFocused": true,
+      "applicationDeadline": "2025-08-15"
     },
     {
       "name": "nwHacks",
