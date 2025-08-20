@@ -1,4 +1,5 @@
 import type { Event } from '../types';
+import ApplicationStatus from './ApplicationStatus';
 import './EventCard.scss';
 
 interface EventCardProps {
