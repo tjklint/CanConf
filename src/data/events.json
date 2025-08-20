@@ -411,16 +411,6 @@
       "isStudentFocused": false
     },
     {
-      "name": "Vancouver ReactJS Meetup",
-      "date": "September 5, 2025",
-      "location": "Vancouver, BC",
-      "website": "https://www.meetup.com/reactjs-vancouver/",
-      "province": "BC",
-      "type": "meetup",
-      "tags": ["react", "javascript", "frontend", "jsx", "hooks", "community", "weekly"],
-      "isStudentFocused": false
-    },
-    {
       "name": "Montreal Python User Group",
       "date": "September 10, 2025",
       "location": "Montreal, QC",
@@ -468,36 +458,6 @@
       "province": "BC",
       "type": "meetup",
       "tags": ["technology", "startup", "innovation", "networking", "community", "bi-weekly"],
-      "isStudentFocused": false
-    },
-    {
-      "name": "Toronto Machine Learning Society",
-      "date": "September 30, 2025",
-      "location": "Toronto, ON",
-      "website": "https://www.meetup.com/toronto-machine-learning-society/",
-      "province": "ON",
-      "type": "meetup",
-      "tags": ["machine learning", "ai", "data science", "tensorflow", "pytorch", "research", "monthly"],
-      "isStudentFocused": false
-    },
-    {
-      "name": "Halifax Developer Meetup",
-      "date": "October 2, 2025",
-      "location": "Halifax, NS",
-      "website": "https://www.meetup.com/halifax-developer-meetup/",
-      "province": "NS",
-      "type": "meetup",
-      "tags": ["web development", "mobile", "software engineering", "community", "networking", "monthly"],
-      "isStudentFocused": false
-    },
-    {
-      "name": "Winnipeg .NET User Group",
-      "date": "October 5, 2025",
-      "location": "Winnipeg, MB",
-      "website": "https://www.meetup.com/winnipeg-net-user-group/",
-      "province": "MB",
-      "type": "meetup",
-      "tags": [".net", "c#", "asp.net", "microsoft", "enterprise", "community", "monthly"],
       "isStudentFocused": false
     }
   ]
