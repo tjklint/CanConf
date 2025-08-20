@@ -489,6 +489,6 @@
       "type": "meetup",
       "tags": ["elixir", "erlang", "back-end", "community", "monthly"],
       "isStudentFocused": false
-    },
+    }
   ]
 }
