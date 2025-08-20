@@ -57,9 +57,15 @@ const EventSection = ({ events, selectedProvince, onProvinceChange }: EventSecti
     [events, hackathonSearch, filterAndSortEvents]
   );
 
+  const filteredMeetups = useMemo(() => 
+    filterAndSortEvents(events, meetupSearch, 'meetup'), 
+    [events, meetupSearch, filterAndSortEvents]
+  );
+
   // Limit displayed events to 5 unless "show all" is toggled
   const displayedConferences = showAllConferences ? filteredConferences : filteredConferences.slice(0, 5);
   const displayedHackathons = showAllHackathons ? filteredHackathons : filteredHackathons.slice(0, 5);
+  const displayedMeetups = showAllMeetups ? filteredMeetups : filteredMeetups.slice(0, 5);
 
   const renderEventColumn = (
     title: string,
