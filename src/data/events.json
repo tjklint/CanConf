@@ -209,7 +209,8 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon", "beginner", "mlh", "student", "uoft", "canada", "programming", "competition"],
-      "isStudentFocused": true
+      "isStudentFocused": true,
+      "isBeginnerFocused": true
     },
     {
       "name": "Hack the Valley",
