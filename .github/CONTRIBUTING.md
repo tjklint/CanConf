@@ -21,7 +21,9 @@ The easiest way to contribute is by adding new events to our directory. Here's h
   "province": "ON",
   "type": "conference",
   "tags": ["tag1", "tag2", "tag3"],
-  "isStudentFocused": false
+  "isStudentFocused": false,
+  "isBeginnerFocused": true,
+  "isProfessional": false
 }
 ```
 
@@ -32,9 +34,19 @@ The easiest way to contribute is by adding new events to our directory. Here's h
 - **location**: "City, Province" format
 - **website**: Official event website
 - **province**: Use 2-letter province codes (ON, BC, QC, AB, etc.)
-- **type**: Either "conference" or "hackathon"
+- **type**: Either "conference", "hackathon", or "meetup"
 - **tags**: Array of relevant keywords (programming languages, technologies, themes)
 - **isStudentFocused**: true if primarily for students, false otherwise
+- **isBeginnerFocused** (optional): true if event is designed for beginners/first-time participants
+- **isProfessional** (optional): true if event targets industry professionals
+
+#### Optional Field Usage:
+
+**isBeginnerFocused**: Use for hackathons that specifically welcome first-time participants, have beginner tracks, or emphasize learning over competition. This adds a red "Beginner" badge.
+
+**isProfessional**: Use for events that target working professionals, require industry experience, or focus on advanced topics. This adds a black "Professional" badge.
+
+These fields are optional - only include them when they clearly apply to your event.
 
 ### Event Criteria ✅
 
