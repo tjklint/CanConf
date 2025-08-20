@@ -117,6 +117,24 @@
   }
 }
 
+// Tablet view - stack meetups below conferences and hackathons
+@media (max-width: 1024px) and (min-width: 769px) {
+  .event-section {
+    &__content {
+      flex-wrap: wrap;
+      
+      .event-section__column:nth-child(5) { // Meetups column (with dividers, it's the 5th child)
+        flex-basis: 100%;
+        margin-top: 1rem;
+      }
+      
+      .event-section__divider:nth-child(4) { // Divider before meetups
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .event-section {
     padding: 1rem;
