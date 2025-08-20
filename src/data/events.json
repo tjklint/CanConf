@@ -9,7 +9,8 @@
       "type": "hackathon",
       "tags": ["hackathon", "beginner", "student", "mlh", "canada", "programming", "competition", "waterloo", "first-time-hackers", "learning", "collaboration", "first-year"],
       "isStudentFocused": true,
-      "isBeginnerFocused": true
+      "isBeginnerFocused": true,
+      "applicationDeadline": "2025-12-15"
     },
     {
       "name": "Web Summit Vancouver",
