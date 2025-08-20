@@ -9,6 +9,7 @@ export interface Event {
   isStudentFocused: boolean;
   isBeginnerFocused?: boolean; // Optional field for hackathons
   isProfessional?: boolean;    // Optional field for professional events
+  applicationDeadline?: string; // Optional application deadline (ISO date string)
 }
 
 export interface Contributor {

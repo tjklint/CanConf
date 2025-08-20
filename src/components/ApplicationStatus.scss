@@ -1,0 +1,231 @@
+.application-status-container {
+  position: relative;
+  display: inline-block;
+
+  // Create an invisible bridge to prevent hover breaking
+  &:hover .application-status-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.25rem; // Same as margin-bottom
+    background: transparent;
+    z-index: 999;
+  }
+}
+
+.application-status-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
+}
+
+.application-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem; // Match header badges exactly
+  border-radius: 4px; // Match header badges exactly
+  font-size: 0.75rem; // Match header badges exactly
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; // Match header badges exactly
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap; // Match header badges exactly
+
+  &--open {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+
+    &:hover {
+      background-color: #bbf7d0;
+    }
+  }
+
+  &--closed {
+    background-color: #fecaca;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+
+    &:hover {
+      background-color: #fca5a5;
+    }
+  }
+
+  &--unknown {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+
+    &:hover {
+      background-color: #e5e7eb;
+    }
+  }
+
+  &__icon {
+    font-size: 0.625rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    white-space: nowrap;
+  }
+}
+
+.application-status-tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 0.25rem; // Reduced gap
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+
+  &__content {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    min-width: 200px;
+    max-width: 280px;
+  }
+
+  &__deadline {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  &__help {
+    color: #6b7280;
+  }
+
+  &__report {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: #dc2626;
+    }
+  }
+
+  &__or {
+    color: #9ca3af;
+    font-style: italic;
+  }
+
+  &__contribute {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+  }
+
+  // Tooltip arrow
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #e5e7eb;
+    margin-top: 1px;
+    z-index: -1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .application-status {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.3rem;
+    gap: 0.15rem;
+    
+    &__text {
+      display: none; // Hide text on mobile, show only icon
+    }
+
+    &__icon {
+      font-size: 0.5rem;
+    }
+  }
+
+  .application-status-tooltip {
+    // Position tooltip above the status on mobile
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &__content {
+      min-width: 180px;
+      max-width: 250px;
+    }
+
+    &::after {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

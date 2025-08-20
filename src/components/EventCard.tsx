@@ -1,4 +1,5 @@
 import type { Event } from '../types';
+import ApplicationStatus from './ApplicationStatus';
 import './EventCard.scss';
 
 interface EventCardProps {
@@ -33,6 +34,13 @@ const EventCard = ({ event }: EventCardProps) => {
         >
           Visit Website →
         </a>
+      </div>
+      <div className="event-card__footer">
+        <ApplicationStatus 
+          eventName={event.name}
+          applicationDeadline={event.applicationDeadline}
+          eventType={event.type}
+        />
       </div>
     </div>
   );
