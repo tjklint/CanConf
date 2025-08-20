@@ -179,7 +179,8 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon", "ai", "vibe coding", "canada", "programming", "competition"],
-      "isStudentFocused": false
+      "isStudentFocused": false,
+      "isProfessional": true
     },    
     {
       "name": "ConUHacks X",
