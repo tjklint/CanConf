@@ -7,6 +7,8 @@ export interface Event {
   type: 'conference' | 'hackathon' | 'meetup';
   tags: string[];
   isStudentFocused: boolean;
+  isBeginnerFocused?: boolean; // Optional field for hackathons
+  isProfessional?: boolean;    // Optional field for professional events
 }
 
 export interface Contributor {
