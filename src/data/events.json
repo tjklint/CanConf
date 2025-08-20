@@ -399,6 +399,106 @@
       "type": "conference",
       "tags": ["google", "ai", "artificial intelligence", "networking", "cloud", "social good", "workshops", "community", "innovation", "social-good", "winnipeg", "west-coast"],
       "isStudentFocused": false
+    },
+    {
+      "name": "Toronto JavaScript Meetup",
+      "date": "August 25, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.meetup.com/torontojs/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["javascript", "frontend", "backend", "nodejs", "react", "community", "networking", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Vancouver ReactJS Meetup",
+      "date": "September 5, 2025",
+      "location": "Vancouver, BC",
+      "website": "https://www.meetup.com/reactjs-vancouver/",
+      "province": "BC",
+      "type": "meetup",
+      "tags": ["react", "javascript", "frontend", "jsx", "hooks", "community", "weekly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Montreal Python User Group",
+      "date": "September 10, 2025",
+      "location": "Montreal, QC",
+      "website": "https://www.meetup.com/montreal-python/",
+      "province": "QC",
+      "type": "meetup",
+      "tags": ["python", "data science", "machine learning", "django", "flask", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Calgary Software Crafters",
+      "date": "September 15, 2025",
+      "location": "Calgary, AB",
+      "website": "https://www.meetup.com/calgary-software-crafters/",
+      "province": "AB",
+      "type": "meetup",
+      "tags": ["software engineering", "clean code", "tdd", "agile", "craftsmanship", "community", "bi-weekly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Ottawa Java User Group",
+      "date": "September 18, 2025",
+      "location": "Ottawa, ON",
+      "website": "https://www.meetup.com/ottawa-java-user-group/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["java", "spring", "microservices", "enterprise", "jvm", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Toronto DevOps Meetup",
+      "date": "September 20, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.meetup.com/toronto-devops/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["devops", "kubernetes", "docker", "aws", "azure", "ci/cd", "infrastructure", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Vancouver Tech Meetup",
+      "date": "September 25, 2025",
+      "location": "Vancouver, BC",
+      "website": "https://www.meetup.com/vancouver-tech-meetup/",
+      "province": "BC",
+      "type": "meetup",
+      "tags": ["technology", "startup", "innovation", "networking", "community", "bi-weekly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Toronto Machine Learning Society",
+      "date": "September 30, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.meetup.com/toronto-machine-learning-society/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["machine learning", "ai", "data science", "tensorflow", "pytorch", "research", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Halifax Developer Meetup",
+      "date": "October 2, 2025",
+      "location": "Halifax, NS",
+      "website": "https://www.meetup.com/halifax-developer-meetup/",
+      "province": "NS",
+      "type": "meetup",
+      "tags": ["web development", "mobile", "software engineering", "community", "networking", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Winnipeg .NET User Group",
+      "date": "October 5, 2025",
+      "location": "Winnipeg, MB",
+      "website": "https://www.meetup.com/winnipeg-net-user-group/",
+      "province": "MB",
+      "type": "meetup",
+      "tags": [".net", "c#", "asp.net", "microsoft", "enterprise", "community", "monthly"],
+      "isStudentFocused": false
     }
   ]
 }
