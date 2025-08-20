@@ -165,6 +165,19 @@ const EventSection = ({ events, selectedProvince, onProvinceChange }: EventSecti
           showAllHackathons,
           setShowAllHackathons
         )}
+
+        <div className="event-section__divider"></div>
+        
+        {renderEventColumn(
+          'Meetups',
+          displayedMeetups,
+          filteredMeetups,
+          meetupSearch,
+          setMeetupSearch,
+          'Search meetups... (City, Name, Tags)',
+          showAllMeetups,
+          setShowAllMeetups
+        )}
       </div>
     </div>
   );
