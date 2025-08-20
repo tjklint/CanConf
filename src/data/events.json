@@ -459,6 +459,36 @@
       "type": "meetup",
       "tags": ["technology", "startup", "innovation", "networking", "community", "bi-weekly"],
       "isStudentFocused": false
-    }
+    },
+    {
+      "name": "Software Crafters Montréal",
+      "date": "September 3, 2025",
+      "location": "Montréal, QC",
+      "website": "https://guild.host/software-crafters-montreal",
+      "province": "QC",
+      "type": "meetup",
+      "tags": ["software engineering", "clean code", "tdd", "agile", "craftsmanship", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "React & React Native Montréal",
+      "date": "September 10, 2025",
+      "location": "Montréal, QC",
+      "website": "https://guild.host/react-montreal",
+      "province": "QC",
+      "type": "meetup",
+      "tags": ["react", "react native", "front-end", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Elixir Montréal",
+      "date": "August 26, 2025",
+      "location": "Montréal, QC",
+      "website": "https://guild.host/elixir-montreal",
+      "province": "QC",
+      "type": "meetup",
+      "tags": ["elixir", "erlang", "back-end", "community", "monthly"],
+      "isStudentFocused": false
+    },
   ]
 }
