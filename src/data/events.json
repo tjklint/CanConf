@@ -8,9 +8,7 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon", "beginner", "student", "mlh", "canada", "programming", "competition", "waterloo", "first-time-hackers", "learning", "collaboration", "first-year"],
-      "isStudentFocused": true,
-      "isBeginnerFocused": true,
-      "applicationDeadline": "2025-12-15"
+      "isStudentFocused": true
     },
     {
       "name": "Web Summit Vancouver",
@@ -180,8 +178,7 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon", "ai", "vibe coding", "canada", "programming", "competition"],
-      "isStudentFocused": false,
-      "isProfessional": true
+      "isStudentFocused": false
     },    
     {
       "name": "ConUHacks X",
@@ -211,8 +208,7 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon", "beginner", "mlh", "student", "uoft", "canada", "programming", "competition"],
-      "isStudentFocused": true,
-      "isBeginnerFocused": true
+      "isStudentFocused": true
     },
     {
       "name": "Hack the Valley",
@@ -302,8 +298,7 @@
       "province": "ON",
       "type": "hackathon",
       "tags": ["hackathon","mlh","programming", "innovation", "competition"],
-      "isStudentFocused": true,
-      "applicationDeadline": "2025-08-15"
+      "isStudentFocused": true
     },
     {
       "name": "nwHacks",

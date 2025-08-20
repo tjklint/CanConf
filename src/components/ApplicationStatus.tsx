@@ -21,6 +21,10 @@ const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
     return null;
   }
   
+  const handleToggleTooltip = () => {
+    setShowTooltip(!showTooltip);
+  };
+
   const handleReportError = () => {
     const statusText = status === 'unknown' ? 'Unknown' : 
                      status === 'open' ? `Open (closes ${formatApplicationDeadline(applicationDeadline)})` :
@@ -63,45 +67,50 @@ const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
     <div className="application-status-container">
       <div 
         className={`application-status ${config.className}`}
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
+        onClick={handleToggleTooltip}
       >
         <span className="application-status__icon">{config.icon}</span>
         <span className="application-status__text">{config.text}</span>
       </div>
       
       {showTooltip && (
-        <div className="application-status-tooltip">
-          <div className="application-status-tooltip__content">
-            {config.deadline && (
-              <div className="application-status-tooltip__deadline">
-                {config.deadline}
+        <>
+          <div 
+            className="application-status-overlay"
+            onClick={() => setShowTooltip(false)}
+          />
+          <div className="application-status-tooltip">
+            <div className="application-status-tooltip__content">
+              {config.deadline && (
+                <div className="application-status-tooltip__deadline">
+                  {config.deadline}
+                </div>
+              )}
+              <div className="application-status-tooltip__actions">
+                <span className="application-status-tooltip__help">
+                  Wrong info?
+                </span>
+                <button 
+                  className="application-status-tooltip__report"
+                  onClick={handleReportError}
+                  title="Report incorrect application status"
+                >
+                  Report Issue
+                </button>
+                <span className="application-status-tooltip__or">or</span>
+                <a 
+                  href="https://github.com/tjklint/CanConf/blob/main/.github/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="application-status-tooltip__contribute"
+                  title="Learn how to contribute corrections"
+                >
+                  Contribute Fix
+                </a>
               </div>
-            )}
-            <div className="application-status-tooltip__actions">
-              <span className="application-status-tooltip__help">
-                Wrong info?
-              </span>
-              <button 
-                className="application-status-tooltip__report"
-                onClick={handleReportError}
-                title="Report incorrect application status"
-              >
-                Report Issue
-              </button>
-              <span className="application-status-tooltip__or">or</span>
-              <a 
-                href="https://github.com/tjklint/CanConf/blob/main/.github/CONTRIBUTING.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="application-status-tooltip__contribute"
-                title="Learn how to contribute corrections"
-              >
-                Contribute Fix
-              </a>
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

@@ -1,6 +1,28 @@
 .application-status-container {
   position: relative;
   display: inline-block;
+
+  // Create an invisible bridge to prevent hover breaking
+  &:hover .application-status-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.25rem; // Same as margin-bottom
+    background: transparent;
+    z-index: 999;
+  }
+}
+
+.application-status-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
 }
 
 .application-status {
@@ -60,7 +82,7 @@
   position: absolute;
   bottom: 100%;
   right: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem; // Reduced gap
   z-index: 1000;
   animation: fadeIn 0.2s ease-out;
 
