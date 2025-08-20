@@ -10,9 +10,17 @@ const EventCard = ({ event }: EventCardProps) => {
     <div className="event-card">
       <div className="event-card__header">
         <h3 className="event-card__name">{event.name}</h3>
-        {event.isStudentFocused && (
-          <span className="event-card__student-badge">Student</span>
-        )}
+        <div className="event-card__badges">
+          {event.isStudentFocused && (
+            <span className="event-card__badge event-card__badge--student">Student</span>
+          )}
+          {event.isBeginnerFocused && (
+            <span className="event-card__badge event-card__badge--beginner">Beginner</span>
+          )}
+          {event.isProfessional && (
+            <span className="event-card__badge event-card__badge--professional">Professional</span>
+          )}
+        </div>
       </div>
       <div className="event-card__details">
         <p className="event-card__date">{event.date}</p>
