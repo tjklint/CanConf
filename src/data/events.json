@@ -399,6 +399,66 @@
       "type": "conference",
       "tags": ["google", "ai", "artificial intelligence", "networking", "cloud", "social good", "workshops", "community", "innovation", "social-good", "winnipeg", "west-coast"],
       "isStudentFocused": false
+    },
+    {
+      "name": "Toronto JavaScript Meetup",
+      "date": "August 25, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.meetup.com/torontojs/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["javascript", "frontend", "backend", "nodejs", "react", "community", "networking", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Montreal Python User Group",
+      "date": "September 10, 2025",
+      "location": "Montreal, QC",
+      "website": "https://www.meetup.com/montreal-python/",
+      "province": "QC",
+      "type": "meetup",
+      "tags": ["python", "data science", "machine learning", "django", "flask", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Calgary Software Crafters",
+      "date": "September 15, 2025",
+      "location": "Calgary, AB",
+      "website": "https://www.meetup.com/calgary-software-crafters/",
+      "province": "AB",
+      "type": "meetup",
+      "tags": ["software engineering", "clean code", "tdd", "agile", "craftsmanship", "community", "bi-weekly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Ottawa Java User Group",
+      "date": "September 18, 2025",
+      "location": "Ottawa, ON",
+      "website": "https://www.meetup.com/ottawa-java-user-group/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["java", "spring", "microservices", "enterprise", "jvm", "community", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Toronto DevOps Meetup",
+      "date": "September 20, 2025",
+      "location": "Toronto, ON",
+      "website": "https://www.meetup.com/toronto-devops/",
+      "province": "ON",
+      "type": "meetup",
+      "tags": ["devops", "kubernetes", "docker", "aws", "azure", "ci/cd", "infrastructure", "monthly"],
+      "isStudentFocused": false
+    },
+    {
+      "name": "Vancouver Tech Meetup",
+      "date": "September 25, 2025",
+      "location": "Vancouver, BC",
+      "website": "https://www.meetup.com/vancouver-tech-meetup/",
+      "province": "BC",
+      "type": "meetup",
+      "tags": ["technology", "startup", "innovation", "networking", "community", "bi-weekly"],
+      "isStudentFocused": false
     }
   ]
 }

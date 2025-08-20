@@ -4,7 +4,7 @@ export interface Event {
   location: string;
   website: string;
   province: string;
-  type: 'conference' | 'hackathon';
+  type: 'conference' | 'hackathon' | 'meetup';
   tags: string[];
   isStudentFocused: boolean;
 }
