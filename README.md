@@ -1,4 +1,4 @@
-# CanConf 🍁
+<h1 align="center"> CanConf 🍁 </h1>
 
 <h3 align="center">
   Discover Canadian tech conferences, hackathons, and events that could change your career!
