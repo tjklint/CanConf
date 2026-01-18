@@ -88,52 +88,141 @@ def scrape_events(url: str) -> List[Dict]:
             page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             page.wait_for_timeout(1000)
 
-        # Ensure potential cards are present before scraping
-        try:
-            page.wait_for_selector('[data-test="event-card"], article, .event, .event-card, .sc-card, .card', timeout=8000)
-        except Exception:
-            pass
+        # Wait a bit for content to load
+        page.wait_for_timeout(3000)
 
         cards = page.evaluate(
             """
         () => {
-          const nodes = Array.from(document.querySelectorAll(
-            '[data-test="event-card"], article, .event, .event-card, .sc-card, .card'
-          ));
-          const pickText = (root, sels) => {
-            for (const sel of sels) {
-              const el = root.querySelector(sel);
-              if (el && el.textContent) return el.textContent.trim();
-            }
-            return null;
-          };
-          const absoluteHref = (a) => {
-            try { return new URL(a.getAttribute('href'), document.baseURI).href; }
-            catch { return null; }
-          };
-          const items = nodes.map(card => {
-            const name = pickText(card, ['[data-test="event-name"]','h3','h2','a[title]','.event-name','.card-title']);
-            const date = pickText(card, ['[data-test="event-date"]','time','.event-date','.date']);
-            const location = pickText(card, ['[data-test="event-location"]','[class*="location"]','address','.event-location','p']);
-            const anchors = Array.from(card.querySelectorAll('a[href]'));
-            let website = null;
-            for (const a of anchors) {
-              const href = absoluteHref(a) || '';
-              if (href.startsWith('http') && !href.includes('mlh.io')) { website = href; break; }
-            }
-            if (!website && anchors.length) website = absoluteHref(anchors[0]);
-            return { name, date, location, website };
-          }).filter(e => e.name && (e.date || e.when) && e.location);
-          // Deduplicate by name
+          // Strategy: Find all text nodes that contain date patterns, then work backwards
+          // to find the event container and extract data
+          const items = [];
           const seen = new Set();
-          const out = [];
-          for (const e of items) {
-            const key = (e.name || '').trim().toLowerCase();
-            if (!key || seen.has(key)) continue;
-            seen.add(key);
-            out.push(e);
+          
+          // Find all elements with text content
+          const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null
+          );
+          
+          const textNodes = [];
+          let node;
+          while (node = walker.nextNode()) {
+            const text = node.textContent.trim();
+            if (/(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s+\d{1,2}/i.test(text)) {
+              textNodes.push(node);
+            }
           }
-          return out;
+          
+          textNodes.forEach(textNode => {
+            // Find the containing element that has event info
+            let container = textNode.parentElement;
+            for (let i = 0; i < 10 && container; i++) {
+              const text = container.textContent || '';
+              // Check if this container has both date and location
+              const hasDate = /(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s+\d{1,2}/i.test(text);
+              const hasLocation = /[A-Z][a-zA-Z\s]+,\s*(Ontario|Quebec|Québec|British Columbia|Alberta|Manitoba|Saskatchewan|Nova Scotia|New Brunswick|Newfoundland|Prince Edward Island|Yukon|Northwest Territories|Nunavut|ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|YT|NT|NU)/i.test(text);
+              
+              if (hasDate && hasLocation && text.length < 1000) {
+                // Extract data from this container
+                const cleanText = text.replace(/In-Person|Digital|Person|background|logo/gi, ' ').replace(/\s+/g, ' ').trim();
+                
+                // Extract name
+                let name = null;
+                const heading = container.querySelector('h1, h2, h3, h4, h5, h6');
+                if (heading) {
+                  name = heading.textContent.trim();
+                } else {
+                  const nameMatch = cleanText.match(/^([A-Za-z0-9\s&\-\.\+]+?)(?=\s*(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s+\d)/i);
+                  if (nameMatch) {
+                    name = nameMatch[1].trim().replace(/\s+/g, ' ');
+                  }
+                }
+                
+                // Extract date
+                let date = null;
+                const dateMatch = cleanText.match(/(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s+(\d{1,2})(\s*-\s*(\d{1,2}))?/i);
+                if (dateMatch) {
+                  const month = dateMatch[1].toUpperCase();
+                  const day1 = dateMatch[2];
+                  const day2 = dateMatch[4];
+                  date = day2 ? month + ' ' + day1 + ' - ' + day2 : month + ' ' + day1;
+                }
+                
+                // Extract location - Canadian only
+                let location = null;
+                const canadianProvinces = ['Ontario', 'Quebec', 'Québec', 'British Columbia', 'Alberta', 
+                  'Manitoba', 'Saskatchewan', 'Nova Scotia', 'New Brunswick', 
+                  'Newfoundland', 'Prince Edward Island', 'Yukon', 
+                  'Northwest Territories', 'Nunavut'];
+                const canadianCodes = ['ON', 'QC', 'BC', 'AB', 'MB', 'SK', 'NS', 'NB', 'NL', 'PE', 'YT', 'NT', 'NU'];
+                
+                for (const province of canadianProvinces) {
+                  const provinceNorm = province.replace(/é/g, '[ée]');
+                  const provinceEscaped = provinceNorm.replace(/\s+/g, '\\\\s+');
+                  const pattern = new RegExp('([A-Z][a-zA-Z\\\\s]+),\\\\s*' + provinceEscaped, 'i');
+                  const match = cleanText.match(pattern);
+                  if (match) {
+                    let city = match[1].trim();
+                    city = city.replace(/^[A-Z]{2}\s+/, '');
+                    if (city && city.length > 1) {
+                      location = city + ', ' + (province === 'Québec' ? 'Quebec' : province);
+                      break;
+                    }
+                  }
+                }
+                
+                if (!location) {
+                  for (const code of canadianCodes) {
+                    const pattern = new RegExp('([A-Z][a-zA-Z\\\\s]+),\\\\s*' + code + '(?:/|\\\\s|$)', 'i');
+                    const match = cleanText.match(pattern);
+                    if (match) {
+                      let city = match[1].trim();
+                      city = city.replace(/^[A-Z]{2}\s+/, '');
+                      if (city && city.length > 1) {
+                        const codeMap = {'ON': 'Ontario', 'QC': 'Quebec', 'BC': 'British Columbia', 
+                          'AB': 'Alberta', 'MB': 'Manitoba', 'SK': 'Saskatchewan', 'NS': 'Nova Scotia',
+                          'NB': 'New Brunswick', 'NL': 'Newfoundland', 'PE': 'Prince Edward Island',
+                          'YT': 'Yukon', 'NT': 'Northwest Territories', 'NU': 'Nunavut'};
+                        location = city + ', ' + codeMap[code];
+                        break;
+                      }
+                    }
+                  }
+                }
+                
+                // Get website
+                let website = null;
+                const links = Array.from(container.querySelectorAll('a[href]'));
+                for (const link of links) {
+                  const href = link.getAttribute('href') || '';
+                  try {
+                    const fullUrl = new URL(href, window.location.href).href;
+                    if (!fullUrl.includes('mlh.io') && !fullUrl.includes('mlh.com') && fullUrl.startsWith('http')) {
+                      website = fullUrl;
+                      break;
+                    } else if (fullUrl.includes('/events/')) {
+                      website = fullUrl;
+                    }
+                  } catch (e) {}
+                }
+                
+                if (name && location && name.length > 2) {
+                  const key = name.toLowerCase().trim();
+                  if (!seen.has(key)) {
+                    seen.add(key);
+                    items.push({ name: name.trim(), date: date || '', location: location.trim(), website: website || '' });
+                  }
+                }
+                
+                break; // Found event, move to next text node
+              }
+              container = container.parentElement;
+            }
+          });
+          
+          return items;
         }
             """
         )

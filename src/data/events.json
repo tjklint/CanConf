@@ -2,12 +2,26 @@
   "events": [
     {
       "name": "StarterHacks",
-      "date": "January 2026",
+      "date": "January 1, 2026",
       "location": "Waterloo, ON",
       "website": "https://www.starterhacks.ca/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "beginner", "student", "mlh", "canada", "programming", "competition", "waterloo", "first-time-hackers", "learning", "collaboration", "first-year", "firstyear"],
+      "tags": [
+        "hackathon",
+        "beginner",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "waterloo",
+        "first-time-hackers",
+        "learning",
+        "collaboration",
+        "first-year",
+        "firstyear"
+      ],
       "isStudentFocused": true
     },
     {
@@ -17,7 +31,20 @@
       "website": "https://vancouver.websummit.com/",
       "province": "BC",
       "type": "conference",
-      "tags": ["tech", "startup", "innovation", "global", "enterprise", "investment", "vancouver", "canada", "web-summit", "networking", "flagship", "international"],
+      "tags": [
+        "tech",
+        "startup",
+        "innovation",
+        "global",
+        "enterprise",
+        "investment",
+        "vancouver",
+        "canada",
+        "web-summit",
+        "networking",
+        "flagship",
+        "international"
+      ],
       "isStudentFocused": false
     },
     {
@@ -27,17 +54,43 @@
       "website": "https://www.blackhat.com/sector/2025/",
       "province": "ON",
       "type": "conference",
-      "tags": ["cybersecurity", "infosec", "security", "toronto", "canada", "enterprise", "hacking", "defense", "blackhat", "underground-threats", "corporate-defense"],
+      "tags": [
+        "cybersecurity",
+        "infosec",
+        "security",
+        "toronto",
+        "canada",
+        "enterprise",
+        "hacking",
+        "defense",
+        "blackhat",
+        "underground-threats",
+        "corporate-defense"
+      ],
       "isStudentFocused": false
     },
     {
       "name": "/dev/mtl 2025",
-      "date": "Nov 28, 2025",
+      "date": "November 28, 2025",
       "location": "Montreal, QC",
       "website": "https://www.dev-mtl.ca",
       "province": "QC",
       "type": "conference",
-      "tags": ["canada", "quebec", "montreal", "programming", "multi-technology", "front-end", "back-end", "web-development", "tests", "beginner-friendly", "diversity", "community", "meetups"],
+      "tags": [
+        "canada",
+        "quebec",
+        "montreal",
+        "programming",
+        "multi-technology",
+        "front-end",
+        "back-end",
+        "web-development",
+        "tests",
+        "beginner-friendly",
+        "diversity",
+        "community",
+        "meetups"
+      ],
       "isStudentFocused": false
     },
     {
@@ -47,7 +100,19 @@
       "website": "https://confoo.ca/en/2026",
       "province": "QC",
       "type": "conference",
-      "tags": ["developer", "fullstack", "php", "python", "javascript", "nodejs", ".net", "web-development", "canada", "montreal", "multi-technology"],
+      "tags": [
+        "developer",
+        "fullstack",
+        "php",
+        "python",
+        "javascript",
+        "nodejs",
+        ".net",
+        "web-development",
+        "canada",
+        "montreal",
+        "multi-technology"
+      ],
       "isStudentFocused": false
     },
     {
@@ -57,87 +122,205 @@
       "website": "https://2026.pycascades.com",
       "province": "BC",
       "type": "conference",
-      "tags": ["python", "programming", "developer", "pacific-northwest", "vancouver", "canada", "community", "pycon", "west-coast"],
+      "tags": [
+        "python",
+        "programming",
+        "developer",
+        "pacific-northwest",
+        "vancouver",
+        "canada",
+        "community",
+        "pycon",
+        "west-coast"
+      ],
       "isStudentFocused": false
     },
     {
       "name": "TechNova",
-      "date": "Sep 26-28, 2026",
+      "date": "September 26-28, 2026",
       "location": "Waterloo, ON",
       "website": "https://itstechnova.org/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "diversity", "women-in-tech", "non-binary", "inclusive", "waterloo", "university"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "diversity",
+        "women-in-tech",
+        "non-binary",
+        "inclusive",
+        "waterloo",
+        "university"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "Hack Western",
-      "date": "Nov 21-23, 2026",
+      "date": "November 21-23, 2026",
       "location": "London, ON",
       "website": "https://www.hackwestern.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "western-university", "london", "innovation", "tech", "beginner-friendly", "workshops"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "western-university",
+        "london",
+        "innovation",
+        "tech",
+        "beginner-friendly",
+        "workshops"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "DeltaHacks",
-      "date": "Jan 10-11, 2026",
+      "date": "January 10-11, 2026",
       "location": "Hamilton, ON",
       "website": "https://www.deltahacks.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "mcmaster", "hamilton", "change", "social-good", "impact", "innovation"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "mcmaster",
+        "hamilton",
+        "change",
+        "social-good",
+        "impact",
+        "innovation"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "ElleHacks",
-      "date": "Jan 23-25, 2026",
+      "date": "January 23-25, 2026",
       "location": "Toronto, ON",
       "website": "https://ellehacks.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "women-in-tech", "non-binary", "diversity", "inclusive", "toronto", "empowerment", "networking"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "women-in-tech",
+        "non-binary",
+        "diversity",
+        "inclusive",
+        "toronto",
+        "empowerment",
+        "networking"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "UTRA Hacks 2026",
-      "date": "Jan 31 - Feb 1, 2026",
+      "date": "January 31 - February 1, 2026",
       "location": "Toronto, ON",
       "website": "https://hackathon.utra.ca/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "uoft", "toronto", "robotics", "automation", "engineering", "hardware", "ai"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "uoft",
+        "toronto",
+        "robotics",
+        "automation",
+        "engineering",
+        "hardware",
+        "ai"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "QHacks",
-      "date": "Feb 6-8, 2026",
+      "date": "February 6-8, 2026",
       "location": "Kingston, ON",
       "website": "https://qhacks.io/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "queens-university", "kingston", "innovation", "tech", "entrepreneurship", "startups"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "queens-university",
+        "kingston",
+        "innovation",
+        "tech",
+        "entrepreneurship",
+        "startups"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "cmd-f 2026",
-      "date": "Mar 7-8, 2026",
+      "date": "March 7-8, 2026",
       "location": "Vancouver, BC",
       "website": "https://cmd-f.nwplus.io/",
       "province": "BC",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "women-in-tech", "non-binary", "diversity", "vancouver", "ubc", "inclusive", "west-coast"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "women-in-tech",
+        "non-binary",
+        "diversity",
+        "vancouver",
+        "ubc",
+        "inclusive",
+        "west-coast"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "TerraHacks",
-      "date": "Aug 1-3, 2026",
+      "date": "August 1-3, 2026",
       "location": "Toronto, ON",
       "website": "https://terrahacks.ca/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition", "sustainability", "climate", "environment", "green-tech", "toronto", "social-impact", "earth"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "sustainability",
+        "climate",
+        "environment",
+        "green-tech",
+        "toronto",
+        "social-impact",
+        "earth"
+      ],
       "isStudentFocused": true
     },
     {
@@ -147,9 +330,18 @@
       "website": "https://spurhacks.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "canada", "quantum", "web3", "programming", "innovation", "competition"],
+      "tags": [
+        "hackathon",
+        "student",
+        "canada",
+        "quantum",
+        "web3",
+        "programming",
+        "innovation",
+        "competition"
+      ],
       "isStudentFocused": true
-    },    
+    },
     {
       "name": "Hack404",
       "date": "July 4-6, 2025",
@@ -157,9 +349,17 @@
       "website": "https://hack404.dev/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "social good", "canada", "programming", "innovation", "competition"],
+      "tags": [
+        "hackathon",
+        "student",
+        "social good",
+        "canada",
+        "programming",
+        "innovation",
+        "competition"
+      ],
       "isStudentFocused": true
-    },    
+    },
     {
       "name": "Hack the 6ix 2025",
       "date": "July 18-20, 2025",
@@ -167,19 +367,33 @@
       "website": "https://hackthe6ix.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": true
-    },    
+    },
     {
       "name": "AI Tinkerers Hackathon 3.0",
-      "date": "Sep 6-7, 2025",
+      "date": "September 6-7, 2025",
       "location": "Ottawa, ON",
       "website": "https://lu.ma/9k96tg5z",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "ai", "vibe coding", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "ai",
+        "vibe coding",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": false
-    },    
+    },
     {
       "name": "ConUHacks X",
       "date": "January 24-25, 2026",
@@ -187,19 +401,36 @@
       "website": "https://www.conuhacks.io/",
       "province": "QC",
       "type": "hackathon",
-      "tags": ["hackathon", "mlh", "student", "conU", "concordia", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "mlh",
+        "student",
+        "conU",
+        "concordia",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": true
     },
     {
       "name": "UofTHacks",
-      "date": "January 2026",
+      "date": "January 1, 2026",
       "location": "Toronto, ON",
       "website": "https://uofthacks.com/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "mlh", "student", "uoft", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "mlh",
+        "student",
+        "uoft",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": true
-    },    
+    },
     {
       "name": "NewHacks",
       "date": "October 25-26, 2025",
@@ -207,7 +438,16 @@
       "website": "https://newhacks.ca/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "beginner", "mlh", "student", "uoft", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "beginner",
+        "mlh",
+        "student",
+        "uoft",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": true
     },
     {
@@ -217,17 +457,34 @@
       "website": "https://hackthevalley.io/",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mlh", "uoft", "canada", "programming", "competition"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "uoft",
+        "canada",
+        "programming",
+        "competition"
+      ],
       "isStudentFocused": true
-    },    
+    },
     {
       "name": "Waterloo Tech Week",
-      "date": "Sep 8-11, 2025",
+      "date": "September 8-11, 2025",
       "location": "Waterloo, ON",
       "website": "https://waterlootechweek.ca/",
       "province": "ON",
       "type": "conference",
-      "tags": ["ctf", "student", "startup", "conference", "canada", "technology", "innovation", "software development"],
+      "tags": [
+        "ctf",
+        "student",
+        "startup",
+        "conference",
+        "canada",
+        "technology",
+        "innovation",
+        "software development"
+      ],
       "isStudentFocused": false
     },
     {
@@ -237,7 +494,14 @@
       "website": "https://2026.cusec.net",
       "province": "QC",
       "type": "conference",
-      "tags": ["student", "conference", "canada", "technology", "innovation", "software development"],
+      "tags": [
+        "student",
+        "conference",
+        "canada",
+        "technology",
+        "innovation",
+        "software development"
+      ],
       "isStudentFocused": true
     },
     {
@@ -247,17 +511,27 @@
       "website": "https://reactconf.ca",
       "province": "ON",
       "type": "conference",
-      "tags": ["react", "javascript", "frontend", "web development"],
+      "tags": [
+        "react",
+        "javascript",
+        "frontend",
+        "web development"
+      ],
       "isStudentFocused": false
     },
     {
       "name": "TechTO",
       "date": "February 28, 2025",
-      "location": "Toronto, ON", 
+      "location": "Toronto, ON",
       "website": "https://techto.org",
       "province": "ON",
       "type": "conference",
-      "tags": ["networking", "startup", "technology", "innovation"],
+      "tags": [
+        "networking",
+        "startup",
+        "technology",
+        "innovation"
+      ],
       "isStudentFocused": false
     },
     {
@@ -267,7 +541,12 @@
       "website": "https://vanjs.com",
       "province": "BC",
       "type": "conference",
-      "tags": ["javascript", "web development", "frontend", "nodejs"],
+      "tags": [
+        "javascript",
+        "web development",
+        "frontend",
+        "nodejs"
+      ],
       "isStudentFocused": false
     },
     {
@@ -277,7 +556,12 @@
       "website": "https://montrealtech.com",
       "province": "QC",
       "type": "conference",
-      "tags": ["technology", "innovation", "startup", "ai"],
+      "tags": [
+        "technology",
+        "innovation",
+        "startup",
+        "ai"
+      ],
       "isStudentFocused": false
     },
     {
@@ -287,7 +571,12 @@
       "website": "https://calgarydevdays.com",
       "province": "AB",
       "type": "conference",
-      "tags": ["software development", "programming", "devops", "cloud"],
+      "tags": [
+        "software development",
+        "programming",
+        "devops",
+        "cloud"
+      ],
       "isStudentFocused": false
     },
     {
@@ -297,7 +586,13 @@
       "website": "https://hackthenorth.com",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon","mlh","programming", "innovation", "competition"],
+      "tags": [
+        "hackathon",
+        "mlh",
+        "programming",
+        "innovation",
+        "competition"
+      ],
       "isStudentFocused": true
     },
     {
@@ -307,7 +602,12 @@
       "website": "https://nwhacks.io",
       "province": "BC",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "programming", "technology"],
+      "tags": [
+        "hackathon",
+        "student",
+        "programming",
+        "technology"
+      ],
       "isStudentFocused": true
     },
     {
@@ -317,7 +617,12 @@
       "website": "https://mchacks.ca",
       "province": "QC",
       "type": "hackathon",
-      "tags": ["hackathon", "student", "mcgill", "programming"],
+      "tags": [
+        "hackathon",
+        "student",
+        "mcgill",
+        "programming"
+      ],
       "isStudentFocused": true
     },
     {
@@ -327,7 +632,12 @@
       "website": "https://tohacks.ca",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "toronto", "student", "innovation"],
+      "tags": [
+        "hackathon",
+        "toronto",
+        "student",
+        "innovation"
+      ],
       "isStudentFocused": true
     },
     {
@@ -337,7 +647,12 @@
       "website": "https://calgaryhacks.com",
       "province": "AB",
       "type": "hackathon",
-      "tags": ["hackathon", "calgary", "programming", "student"],
+      "tags": [
+        "hackathon",
+        "calgary",
+        "programming",
+        "student"
+      ],
       "isStudentFocused": true
     },
     {
@@ -347,7 +662,12 @@
       "website": "https://devto.com",
       "province": "ON",
       "type": "conference",
-      "tags": ["development", "community", "tech", "networking"],
+      "tags": [
+        "development",
+        "community",
+        "tech",
+        "networking"
+      ],
       "isStudentFocused": false
     },
     {
@@ -357,7 +677,11 @@
       "website": "https://aisummit.ca",
       "province": "QC",
       "type": "conference",
-      "tags": ["artificial intelligence", "machine learning", "data science"],
+      "tags": [
+        "artificial intelligence",
+        "machine learning",
+        "data science"
+      ],
       "isStudentFocused": false
     },
     {
@@ -367,7 +691,12 @@
       "website": "https://hackwestern.com",
       "province": "ON",
       "type": "hackathon",
-      "tags": ["hackathon", "innovation", "technology", "students"],
+      "tags": [
+        "hackathon",
+        "innovation",
+        "technology",
+        "students"
+      ],
       "isStudentFocused": true
     },
     {
@@ -377,7 +706,12 @@
       "website": "https://vantechweek.com",
       "province": "BC",
       "type": "conference",
-      "tags": ["technology", "startup", "innovation", "networking"],
+      "tags": [
+        "technology",
+        "startup",
+        "innovation",
+        "networking"
+      ],
       "isStudentFocused": false
     },
     {
@@ -387,7 +721,12 @@
       "website": "https://www.easya.io/events/easya-consensus-toronto-hackathon",
       "province": "ON",
       "type": "conference",
-      "tags": ["blockchain", "crypto", "web3", "networking"],
+      "tags": [
+        "blockchain",
+        "crypto",
+        "web3",
+        "networking"
+      ],
       "isStudentFocused": false
     },
     {
@@ -397,7 +736,20 @@
       "website": "https://gdg.community.dev/events/details/google-gdg-winnipeg-presents-devfest-winnipeg-2025-tech-for-good-innovate-with-responsibility/",
       "province": "MB",
       "type": "conference",
-      "tags": ["google", "ai", "artificial intelligence", "networking", "cloud", "social good", "workshops", "community", "innovation", "social-good", "winnipeg", "west-coast"],
+      "tags": [
+        "google",
+        "ai",
+        "artificial intelligence",
+        "networking",
+        "cloud",
+        "social good",
+        "workshops",
+        "community",
+        "innovation",
+        "social-good",
+        "winnipeg",
+        "west-coast"
+      ],
       "isStudentFocused": false
     },
     {
@@ -407,7 +759,16 @@
       "website": "https://www.meetup.com/torontojs/",
       "province": "ON",
       "type": "meetup",
-      "tags": ["javascript", "frontend", "backend", "nodejs", "react", "community", "networking", "monthly"],
+      "tags": [
+        "javascript",
+        "frontend",
+        "backend",
+        "nodejs",
+        "react",
+        "community",
+        "networking",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -417,7 +778,15 @@
       "website": "https://www.meetup.com/montreal-python/",
       "province": "QC",
       "type": "meetup",
-      "tags": ["python", "data science", "machine learning", "django", "flask", "community", "monthly"],
+      "tags": [
+        "python",
+        "data science",
+        "machine learning",
+        "django",
+        "flask",
+        "community",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -427,7 +796,15 @@
       "website": "https://www.meetup.com/calgary-software-crafters/",
       "province": "AB",
       "type": "meetup",
-      "tags": ["software engineering", "clean code", "tdd", "agile", "craftsmanship", "community", "bi-weekly"],
+      "tags": [
+        "software engineering",
+        "clean code",
+        "tdd",
+        "agile",
+        "craftsmanship",
+        "community",
+        "bi-weekly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -437,7 +814,15 @@
       "website": "https://www.meetup.com/ottawa-java-user-group/",
       "province": "ON",
       "type": "meetup",
-      "tags": ["java", "spring", "microservices", "enterprise", "jvm", "community", "monthly"],
+      "tags": [
+        "java",
+        "spring",
+        "microservices",
+        "enterprise",
+        "jvm",
+        "community",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -447,7 +832,16 @@
       "website": "https://www.meetup.com/toronto-devops/",
       "province": "ON",
       "type": "meetup",
-      "tags": ["devops", "kubernetes", "docker", "aws", "azure", "ci/cd", "infrastructure", "monthly"],
+      "tags": [
+        "devops",
+        "kubernetes",
+        "docker",
+        "aws",
+        "azure",
+        "ci/cd",
+        "infrastructure",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -457,7 +851,14 @@
       "website": "https://www.meetup.com/vancouver-tech-meetup/",
       "province": "BC",
       "type": "meetup",
-      "tags": ["technology", "startup", "innovation", "networking", "community", "bi-weekly"],
+      "tags": [
+        "technology",
+        "startup",
+        "innovation",
+        "networking",
+        "community",
+        "bi-weekly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -467,7 +868,15 @@
       "website": "https://guild.host/software-crafters-montreal",
       "province": "QC",
       "type": "meetup",
-      "tags": ["software engineering", "clean code", "tdd", "agile", "craftsmanship", "community", "monthly"],
+      "tags": [
+        "software engineering",
+        "clean code",
+        "tdd",
+        "agile",
+        "craftsmanship",
+        "community",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -477,7 +886,13 @@
       "website": "https://guild.host/react-montreal",
       "province": "QC",
       "type": "meetup",
-      "tags": ["react", "react native", "front-end", "community", "monthly"],
+      "tags": [
+        "react",
+        "react native",
+        "front-end",
+        "community",
+        "monthly"
+      ],
       "isStudentFocused": false
     },
     {
@@ -487,8 +902,322 @@
       "website": "https://guild.host/elixir-montreal",
       "province": "QC",
       "type": "meetup",
-      "tags": ["elixir", "erlang", "back-end", "community", "monthly"],
+      "tags": [
+        "elixir",
+        "erlang",
+        "back-end",
+        "community",
+        "monthly"
+      ],
       "isStudentFocused": false
+    },
+    {
+      "name": "CruzHacks",
+      "date": "January 16-18, 2026",
+      "location": "Toronto, Ontario",
+      "website": "https://www.cruzhacks.com/?utm_source=mlh&utm_medium=referral&utm_campaign=season_events&utm_content=CruzHacks",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "BrébeufHx 9.0",
+      "date": "January 16-17, 2026",
+      "location": "Hamilton, Ontario",
+      "website": "https://brebeufhackathon.com/?utm_source=mlh&utm_medium=referral&utm_campaign=season_events&utm_content=Br%C3%A9beufHx+9.0",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition",
+        "CEGEP",
+        "college"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "PEC Hacks 3.0",
+      "date": "December 27-28, 2025",
+      "location": "Toronto, Ontario",
+      "website": "https://pechacks.org/?utm_source=mlh&utm_medium=referral&utm_campaign=season_events&utm_content=PEC+Hacks+3.0",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "uOttaHack 8",
+      "date": "January 16-18, 2026",
+      "location": "Ottawa, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hackville",
+      "date": "January 17-18, 2026",
+      "location": "Mississauga, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "HackHive",
+      "date": "January 23-25, 2026",
+      "location": "Oshawa, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "PolyHACKS 2026",
+      "date": "January 31 - February 1, 2026",
+      "location": "Montreal, Quebec",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "QC",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Mac-a-Thon",
+      "date": "February 7-8, 2026",
+      "location": "Hamilton, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hack McWiCS",
+      "date": "February 7-8, 2026",
+      "location": "Montreal, Quebec",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "QC",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "CTRL+HACK+DEL 2.0",
+      "date": "February 13-15, 2026",
+      "location": "Markham, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "SheHacks+10",
+      "date": "January 9-11, 2026",
+      "location": "London, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hack Western 12",
+      "date": "November 21-23, 2025",
+      "location": "London, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hacktrent",
+      "date": "November 8-9, 2025",
+      "location": "Peterborough, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "NewHacks 2025",
+      "date": "October 25-26, 2025",
+      "location": "Toronto, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "EmberHacks",
+      "date": "October 25-26, 2025",
+      "location": "Mississauga, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Stormhacks",
+      "date": "October 4-5, 2025",
+      "location": "Burnaby, British Columbia",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "BC",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "TerraHacks2025",
+      "date": "August 1-3, 2025",
+      "location": "Toronto, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Hack the 6ix",
+      "date": "July 18-20, 2025",
+      "location": "Toronto, Ontario",
+      "website": "https://mlh.io/seasons/2026/events",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "mlh",
+        "canada",
+        "programming",
+        "competition"
+      ],
+      "isStudentFocused": true
     }
   ]
 }
