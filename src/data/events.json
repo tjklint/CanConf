@@ -1,6 +1,26 @@
 {
   "events": [
     {
+      "name": "Canadian Undergraduate Conference on AI",
+      "date": "March 7-8, 2026",
+      "location": "Toronto, ON",
+      "website": "https://cucai.ca/",
+      "province": "ON",
+      "type": "conference",
+      "tags": [
+        "conference",
+        "ai",
+        "student",
+        "artificial intelligence",
+        "canada",
+        "toronto",
+        "university",
+        "learning",
+        "collaboration"
+      ],
+      "isStudentFocused": true
+    },
+    {
       "name": "StarterHacks",
       "date": "January 1, 2026",
       "location": "Waterloo, ON",
