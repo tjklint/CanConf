@@ -1238,6 +1238,38 @@
         "competition"
       ],
       "isStudentFocused": true
+    },
+    {
+      "name": "MTL_code",
+      "date": "February 19, 2026",
+      "location": "Montreal, Quebec",
+      "website": "https://botpress.com/events",
+      "province": "QC",
+      "type": "conference",
+      "tags": [
+        "student",
+        "canada",
+        "montreal",
+        "programming",
+        "conference"
+      ],
+      "isStudentFocused": true
+    },
+    {
+      "name": "Code à Québec",
+      "date": "January 29, 2026",
+      "location": "Quebec City, Quebec",
+      "website": "https://code-a-quebec.com/",
+      "province": "QC",
+      "type": "conference",
+      "tags": [
+        "student",
+        "canada",
+        "quebec",
+        "programming",
+        "conference"
+      ],
+      "isStudentFocused": true
     }
   ]
 }
