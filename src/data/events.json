@@ -21,6 +21,33 @@
       "isStudentFocused": true
     },
     {
+      "name": "UdeM Hacks",
+      "date": "March 7-8, 2026",
+      "location": "Montreal, QC",
+      "website": "https://udemhacks.com/",
+      "province": "QC",
+      "type": "hackathon",
+      "tags": [
+        "hackathon",
+        "student",
+        "canada",
+        "programming",
+        "competition",
+        "montreal",
+        "udem",
+        "universite-de-montreal",
+        "beginner-friendly",
+        "inclusive",
+        "learning",
+        "collaboration",
+        "innovation",
+        "iot",
+        "ai"
+      ],
+      "isStudentFocused": true,
+      "isBeginnerFocused": true
+    },
+    {
       "name": "StarterHacks",
       "date": "January 1, 2026",
       "location": "Waterloo, ON",
