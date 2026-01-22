@@ -1297,6 +1297,54 @@
         "conference"
       ],
       "isStudentFocused": true
+    },
+
+    {
+      "name": "World's First \"Situation Dashboard\" Hachathon",
+      "date": "January 24, 2026",
+      "location": "Ottawa, Ontario",
+      "website": "https://luma.com/xcg7pg2p",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "student",
+        "canada",
+        "ottawa",
+        "programming",
+        "hackathon", 
+        "ontario", 
+        "claude", 
+        "prize", 
+        "competition",
+        "ai"
+      ],
+      "isStudentFocused": true
+    }, 
+
+    {
+      "name": "Builder Sundays",
+      "date": "January 25, 2026",
+      "location": "Ottawa, Ontario",
+      "website": "https://luma.com/mjtlvs6v?tk=cX2Qi6",
+      "province": "ON",
+      "type": "meetup",
+      "tags": [
+        "canada",
+        "meetup",
+        "ottawa",
+        "programming",
+        "ontario", 
+        "co-working", 
+        "networking",
+        "community"
+      ],
+      "isStudentFocused": true,
+      "isProfessional": true,
+      "isBeginnerFocused": true
     }
+
+
   ]
+
+  
 }
