@@ -1341,6 +1341,51 @@
       "isStudentFocused": true,
       "isProfessional": true,
       "isBeginnerFocused": true
+    },
+
+    {
+      "name": "Socratica's Winter 2026 Symposium",
+      "date": "March 21-22, 2026",
+      "location": "Waterloo, Ontario",
+      "website": "https://symposium.socratica.info/",
+      "province": "ON",
+      "type": "conference",
+      "tags": [
+        "canada",
+        "waterloo",
+        "programming",
+        "ontario", 
+        "conference",
+        "networking",
+        "community",
+        "ai"
+      ],
+      "isStudentFocused": true,
+      "isProfessional": true,
+      "isBeginnerFocused": true
+    },
+
+    {
+      "name": "Technata 2026 Career Fair in Kanata",
+      "date": "March 31, 2026",
+      "location": "Kanata, Ontario",
+      "website": "https://www.discovertechnata.com/career-fair/",
+      "province": "ON",
+      "type": "conference",
+      "tags": [
+        "canada",
+        "kanata",
+        "programming",
+        "ontario", 
+        "conference",
+        "networking",
+        "community",
+        "ai"
+      ],
+      "isStudentFocused": true,
+      "isProfessional": true,
+      "isBeginnerFocused": true
+
     }
 
 
