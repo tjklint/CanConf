@@ -1341,9 +1341,27 @@
       "isStudentFocused": true,
       "isProfessional": true,
       "isBeginnerFocused": true
+    },
+    {
+      "name": "GenAI Genesis",
+      "date": "March 13-15, 2026",
+      "location": "Toronto, Ontario",
+      "website": "https://genaigenesis.ca/",
+      "province": "ON",
+      "type": "hackathon",
+      "tags": [
+        "canada",
+        "toronto",
+        "ontario", 
+        "ai", 
+        "networking",
+        "community"
+      ],
+      "isStudentFocused": true,
+      "isProfessional": true,
+      "isBeginnerFocused": true,
+      "applicationDeadline": "2026-02-22"
     }
-
-
   ]
 
   
