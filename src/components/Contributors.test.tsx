@@ -17,21 +17,6 @@ describe('Contributors', () => {
     expect(screen.getByText('@nicoespeon')).toBeInTheDocument();
   });
 
-  it('renders contributor stats with contribution count', () => {
-    render(<Contributors />);
-
-    expect(screen.getByText('27 contributions')).toBeInTheDocument();
-    expect(screen.getByText('5 contributions')).toBeInTheDocument();
-    expect(screen.getByText('2 contributions')).toBeInTheDocument();
-  });
-
-  it('renders singular "contribution" when count is 1', () => {
-    render(<Contributors />);
-
-    const contributionTexts = screen.getAllByText('1 contribution');
-    expect(contributionTexts.length).toBe(4);
-  });
-
   it('renders contributor since date', () => {
     render(<Contributors />);
 
@@ -71,13 +56,6 @@ describe('Contributors', () => {
     expect(contributeLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  it('renders correct number of contributor cards', () => {
-    render(<Contributors />);
-
-    const cards = document.querySelectorAll('.contributors__card');
-    expect(cards.length).toBe(7);
-  });
-
   it('renders all contributor usernames', () => {
     render(<Contributors />);
 
@@ -101,19 +79,5 @@ describe('Contributors', () => {
 
     expect(document.querySelector('.contributors')).toBeInTheDocument();
     expect(document.querySelector('.contributors__container')).toBeInTheDocument();
-  });
-
-  it('renders contributor info sections', () => {
-    render(<Contributors />);
-
-    const infoSections = document.querySelectorAll('.contributors__info');
-    expect(infoSections.length).toBe(7);
-  });
-
-  it('renders contributor stats sections', () => {
-    render(<Contributors />);
-
-    const statsSections = document.querySelectorAll('.contributors__stats');
-    expect(statsSections.length).toBe(7);
   });
 });

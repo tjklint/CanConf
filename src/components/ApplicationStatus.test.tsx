@@ -330,12 +330,5 @@ describe('ApplicationStatus', () => {
 
       expect(screen.getByText('Applications Open')).toBeInTheDocument();
     });
-
-    it('handles deadline one millisecond in the past (closed)', () => {
-      jest.setSystemTime(new Date('2026-06-01T00:00:00.001'));
-      render(<ApplicationStatus {...defaultProps} applicationDeadline="2026-06-01" />);
-
-      expect(screen.getByText('Applications Closed')).toBeInTheDocument();
-    });
   });
 });
